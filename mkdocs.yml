@@ -1,0 +1,61 @@
+site_name: "Melodia - Documentación del Proyecto"
+site_description: "Documentación técnica de Melodia, plataforma de streaming de música"
+site_url: https://melodia-fiuba.github.io/docs/
+repo_url: https://github.com/Melodia-FIUBA/docs
+repo_name: Melodia-FIUBA/docs
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Inicio: index.md
+  - Arquitectura: architecture.md
+  - Roadmap: roadmap.md
+  - Decisiones y Aprendizajes: decisions-and-learnings.md
+  - Contratos de API: api-contracts.md
+  - Problemas Conocidos: known-issues.md
+  - Servicios:
+      - Mobile App: services/mobile-app.md
+      - Admin Backoffice: services/admin-backoffice.md
+      - Songs Service: services/songs-service.md
+      - Users Service: services/users-service.md
+      - Admin Service: services/admin-service.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Melodia-FIUBA
