@@ -36,7 +36,7 @@ Melodia permite a los usuarios escuchar música, crear playlists, seguir a artis
 
 ## 🚀 Navegación Rápida
 
-<div class="grid cards" markdown>
+<div class="grid cards" markdown="1">
 
 -   :material-architecture:{ .lg .middle } **Arquitectura**
 
