@@ -18,10 +18,11 @@ El Songs Service maneja toda la lógica relacionada con canciones, álbumes, pla
 ### Especificación OpenAPI
 
 <!-- TODO: Agregar archivo OpenAPI en docs/openapi/songs-service.yaml -->
-
+<!-- Una vez agregado el archivo, descomentar la siguiente línea para embeber Swagger UI:
 ```swagger-ui
-https://melodia-fiuba.github.io/docs/openapi/songs-service.yaml
+openapi/songs-service.yaml
 ```
+-->
 
 !!! warning "Placeholder"
     La especificación OpenAPI del Songs Service será embebida aquí una vez que esté disponible en `docs/openapi/songs-service.yaml`.
@@ -54,10 +55,11 @@ El Users Service maneja autenticación, autorización y gestión de usuarios.
 ### Especificación OpenAPI
 
 <!-- TODO: Agregar archivo OpenAPI en docs/openapi/users-service.yaml -->
-
+<!-- Una vez agregado el archivo, descomentar la siguiente línea para embeber Swagger UI:
 ```swagger-ui
-https://melodia-fiuba.github.io/docs/openapi/users-service.yaml
+openapi/users-service.yaml
 ```
+-->
 
 !!! warning "Placeholder"
     La especificación OpenAPI del Users Service será embebida aquí una vez que esté disponible en `docs/openapi/users-service.yaml`.
@@ -90,10 +92,11 @@ El Admin Service proporciona endpoints para operaciones administrativas.
 ### Especificación OpenAPI
 
 <!-- TODO: Agregar archivo OpenAPI en docs/openapi/admin-service.yaml -->
-
+<!-- Una vez agregado el archivo, descomentar la siguiente línea para embeber Swagger UI:
 ```swagger-ui
-https://melodia-fiuba.github.io/docs/openapi/admin-service.yaml
+openapi/admin-service.yaml
 ```
+-->
 
 !!! warning "Placeholder"
     La especificación OpenAPI del Admin Service será embebida aquí una vez que esté disponible en `docs/openapi/admin-service.yaml`.

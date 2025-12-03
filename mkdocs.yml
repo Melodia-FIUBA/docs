@@ -1,8 +1,8 @@
 site_name: "Melodia - Documentación del Proyecto"
 site_description: "Documentación técnica de Melodia, plataforma de streaming de música"
 site_url: https://melodia-fiuba.github.io/docs/
-repo_url: https://github.com/Melodia-FIUBA
-repo_name: Melodia-FIUBA
+repo_url: https://github.com/Melodia-FIUBA/docs
+repo_name: Melodia-FIUBA/docs
 
 theme:
   name: material
