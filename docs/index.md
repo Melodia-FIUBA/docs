@@ -1,83 +1,58 @@
 # 🎵 Melodia
 
-Bienvenido a la documentación técnica de **Melodia**, una plataforma de streaming de música desarrollada como proyecto académico. Este sitio contiene toda la información necesaria para entender la arquitectura, los servicios, y las decisiones técnicas tomadas durante el desarrollo.
+## Descripción
 
-Melodia permite a los usuarios escuchar música, crear playlists, seguir a artistas, y descubrir nueva música. Los artistas pueden subir su contenido, gestionar su perfil y acceder a estadísticas de reproducción. Los administradores cuentan con un panel completo para gestionar usuarios, contenido y configuraciones del sistema.
+**Melodia** es una plataforma de streaming de música desarrollada como proyecto académico para la materia Ingeniería de Software 2 de la Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA).
 
-<!-- TODO: Agregar descripción más detallada del proyecto una vez definido el alcance final -->
+La plataforma permite a los usuarios escuchar música, crear playlists, seguir a artistas y descubrir nueva música. Los artistas pueden subir su contenido, gestionar su perfil y acceder a estadísticas de reproducción. Los administradores cuentan con un panel completo para gestionar usuarios, contenido y configuraciones del sistema.
 
----
+📄 **[Enunciado del Trabajo Práctico](enunciado.md)**
 
-## 🧩 Componentes del Sistema
-
-| Componente | Tecnología | Descripción | Repositorio |
-|------------|------------|-------------|-------------|
-| 📱 Mobile App | React Native | Aplicación móvil para usuarios (artistas y oyentes) | [mobile-app](https://github.com/Melodia-FIUBA/mobile-app) |
-| 🖥️ Admin Backoffice | Next.js | Panel web de administración | [admin-backoffice](https://github.com/Melodia-FIUBA/admin-backoffice) |
-| 🎵 Songs Service | Python/Flask | Microservicio para gestión de canciones y colecciones | [songs-service](https://github.com/Melodia-FIUBA/songs-service) |
-| 👤 Users Service | Go | Microservicio para autenticación y gestión de usuarios | [users-service](https://github.com/Melodia-FIUBA/users-service) |
-| ⚙️ Admin Service | Go | Microservicio para operaciones administrativas | [admin-service](https://github.com/Melodia-FIUBA/admin-service) |
+🎬 **[Video Demo](https://example.com)** <!-- TODO: Reemplazar con link real del video demo -->
 
 ---
 
 ## 👥 Equipo
 
-<!-- TODO: Agregar información del equipo -->
+| Nombre      | Rol | GitHub |
+| ----------- | --- | ------ |
+| _Pendiente_ | -   | -      |
+| _Pendiente_ | -   | -      |
+| _Pendiente_ | -   | -      |
+| _Pendiente_ | -   | -      |
+| _Pendiente_ | -   | -      |
 
-| Nombre | Rol | GitHub |
-|--------|-----|--------|
-| *Pendiente* | - | - |
-| *Pendiente* | - | - |
-| *Pendiente* | - | - |
-| *Pendiente* | - | - |
-| *Pendiente* | - | - |
-
----
-
-## 🚀 Navegación Rápida
-
-<div class="grid cards" markdown="1">
-
--   :material-architecture:{ .lg .middle } **Arquitectura**
-
-    ---
-
-    Conoce la arquitectura del sistema, infraestructura en GCP y patrones de diseño
-
-    [:octicons-arrow-right-24: Ver Arquitectura](architecture.md)
-
--   :material-road-variant:{ .lg .middle } **Roadmap**
-
-    ---
-
-    Revisa los checkpoints del proyecto y el progreso del desarrollo
-
-    [:octicons-arrow-right-24: Ver Roadmap](roadmap.md)
-
--   :material-api:{ .lg .middle } **Contratos de API**
-
-    ---
-
-    Documentación interactiva de las APIs de los servicios
-
-    [:octicons-arrow-right-24: Ver APIs](api-contracts.md)
-
--   :material-lightbulb:{ .lg .middle } **Decisiones y Aprendizajes**
-
-    ---
-
-    Decisiones técnicas tomadas y lecciones aprendidas
-
-    [:octicons-arrow-right-24: Ver Decisiones](decisions-and-learnings.md)
-
-</div>
+<!-- TODO: Completar con información del equipo -->
 
 ---
 
-## 📊 Diagrama de Contexto
+## 📑 Tabla de Contenidos
 
-<!-- TODO: Agregar diagrama de contexto general creado en draw.io -->
-![Diagrama de Contexto](assets/diagrams/context-diagram.png)
+### [Arquitectura e Infraestructura](architecture.md)
 
-!!! note "Nota"
-    El diagrama de contexto muestra una visión de alto nivel del sistema y sus interacciones con actores externos.
+Visión general de la arquitectura del sistema, infraestructura en GCP y comunicación entre servicios.
+
+### Roadmap y Checkpoints
+
+Progreso del proyecto organizado por checkpoints de desarrollo:
+
+- [Checkpoint 1](checkpoints/checkpoint-1.md)
+- [Checkpoint 2](checkpoints/checkpoint-2.md)
+- [Checkpoint 3](checkpoints/checkpoint-3.md)
+- [Checkpoint 4](checkpoints/checkpoint-4.md)
+
+### Servicios y Repositorios
+
+- 📱 [Mobile App](services/mobile-app.md) - Aplicación móvil React Native para usuarios (oyentes y artistas)
+- 🖥️ [Admin Backoffice](services/admin-backoffice.md) - Panel web Next.js de administración
+- 🎵 [Songs Service](services/songs-service.md) - Microservicio Python/Flask para gestión de canciones y playlists
+- 👤 [Users Service](services/users-service.md) - Microservicio Go para autenticación y gestión de usuarios
+- ⚙️ [Admin Service](services/admin-service.md) - Microservicio Go para operaciones administrativas
+
+### [Decisiones de Arquitectura](decisions-and-learnings.md)
+
+Decisiones técnicas de alto nivel y justificaciones.
+
+### [Problemas Conocidos y Features Incompletas](known-issues.md)
+
+Bugs identificados, funcionalidades pendientes y deuda técnica.

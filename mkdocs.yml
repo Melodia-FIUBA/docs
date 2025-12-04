@@ -43,17 +43,20 @@ markdown_extensions:
 
 nav:
   - Inicio: index.md
-  - Arquitectura: architecture.md
-  - Roadmap: roadmap.md
-  - Decisiones y Aprendizajes: decisions-and-learnings.md
-  - Contratos de API: api-contracts.md
-  - Problemas Conocidos: known-issues.md
+  - Arquitectura e Infraestructura: architecture.md
+  - Roadmap y Checkpoints:
+      - Checkpoint 1: checkpoints/checkpoint-1.md
+      - Checkpoint 2: checkpoints/checkpoint-2.md
+      - Checkpoint 3: checkpoints/checkpoint-3.md
+      - Checkpoint 4: checkpoints/checkpoint-4.md
   - Servicios:
       - Mobile App: services/mobile-app.md
       - Admin Backoffice: services/admin-backoffice.md
       - Songs Service: services/songs-service.md
       - Users Service: services/users-service.md
       - Admin Service: services/admin-service.md
+  - Decisiones de Arquitectura: decisions-and-learnings.md
+  - Problemas Conocidos: known-issues.md
 
 extra:
   social:
