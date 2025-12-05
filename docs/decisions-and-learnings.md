@@ -52,6 +52,8 @@ En nuestro caso, contamos con tres microservicios distintos:
 2. Performance requerida
 3. Ecosistema y comunidad
 4. Facilidad de deployment en GCP
+5. Practicidad en desarrollo
+6. Tiempo de entrega dado
 ---
 
 ## Estrategia de Autenticación (JWT)
@@ -78,8 +80,6 @@ En nuestro caso, contamos con tres microservicios distintos:
 
 ## Manejo de Archivos Multimedia
 
-<!-- TODO: Completar con estrategia de almacenamiento -->
-
 **Contexto**: Las canciones y portadas necesitan almacenamiento escalable y eficiente para streaming.
 
 **Decisión**: Usar Google Cloud Storage con URLs firmadas.
@@ -96,12 +96,15 @@ En nuestro caso, contamos con tres microservicios distintos:
 1. Cliente solicita canción
 2. Songs Service genera URL firmada con tiempo de expiración
 3. Cliente reproduce desde URL firmada
-
 ---
 
 ## Base de Datos por Servicio
 
-<!-- TODO: Completar con justificación -->
+Decidimos utilizar las siguinetes base de datos por servicio:
+
+- Usuarios: Se utilizo MySQL para el modelado.
+- Colecciones: Se uso PostreSQL para modelerlas.
+- Canciones: Utilizamos el storage de GCP con un enfoque no relacional.
 
 **Contexto**: Evaluar si cada microservicio debería tener su propia base de datos o compartir una única instancia.
 
@@ -109,7 +112,7 @@ En nuestro caso, contamos con tres microservicios distintos:
 
 **Justificación**:
 
-- _Pendiente de completar_
+
 
 **Consecuencias**:
 
