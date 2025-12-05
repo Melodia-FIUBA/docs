@@ -6,37 +6,45 @@ Esta sección documenta las decisiones de arquitectura de alto nivel tomadas dur
 
 ## ¿Por qué Microservicios?
 
-<!-- TODO: Completar con la justificación real del equipo -->
-
 **Contexto**: Al inicio del proyecto se evaluaron dos alternativas: una arquitectura monolítica vs. microservicios.
 
 **Decisión**: Se optó por una arquitectura de microservicios.
 
 **Justificación**:
 
-- _Pendiente de completar_
+Decidimos utilizar una arquitectura basada en microservicios debido a que esta nos permite realizar más escalable en comparación a la monolítica debido a la flexibilidad que tiene al agregar nuevas funcionalidades. Así mismo, es ideal para el desarrollo el paralelo entre integrantes de un grupo y permite incorporar lenguajes o tecnologías distintas y acoplarlos perfectamente.
+En nuestro caso, contamos con tres microservicios distintos:
+
+- El primero es para usuarios, utilizando el lenguaje GO.
+- El segundo es de Colecciones, implementado con Python.
+- El tercero es exclusivo para el BackOffiece, el cual también fue desarrollado en Go
 
 **Consecuencias**:
 
-- ✅ _Beneficio 1_
-- ✅ _Beneficio 2_
-- ⚠️ _Trade-off 1_
+- ✅ Permitió desarrollar funcionalidades distintas más rápidamente.
+- ✅ Estas funcionalidades no necesariamente estaban relacionadas, por lo que había una mejor división de tareas por parte del equipo del Frontend.
+- ✅ El proyecto es más escalable y entendible debido a que esta separados por módulos distintos.
+- ⚠️ En determinados momentos podía ocurrir de que se implementan menos funcionalidades de un determinado microservicio, por lo que uno de los integrantes estaba más ocupado el otro.
+- ⚠️ Como principal desventaja, si alguno de los integrantes del BackEnd no podía realizar una determinada funcionalidad perteneciente a un microservicio especifico, era complicado que reciba ayuda de algún integrante.
 
 ---
 
 ## Elección del Stack Tecnológico
 
-<!-- TODO: Completar con la justificación de cada tecnología -->
+- Mobile App: Por parte de la catedra, como Tecnología del FrontEnd se debía utilizar obligatoriamente React Native debido a la curva de aprendizaje y versatilidad con respecto a la conexión con el backend.
+- Admin BackOffice: Es una tecnología análoga a React Native, pero para el desarrollo de web
+- Songs Service: Se decidio utilizar debido a la facilidad y múltiples libreas con soporte que esta posee.
+- User Service y Admin Service: Como caso particular, se utilizó Go debido a que uno de los integrantes del BackEnd está más familiarizado con el uso de la misma en Go.
 
 **Contexto**: Se necesitaba elegir las tecnologías para cada componente del sistema.
 
 | Componente       | Tecnología Elegida | Alternativas Consideradas | Razón de Elección |
 | ---------------- | ------------------ | ------------------------- | ----------------- |
-| Mobile App       | React Native       | Flutter, Native           | _Pendiente_       |
-| Admin Backoffice | Next.js            | Create React App, Vue.js  | _Pendiente_       |
-| Content Service  | Python/Flask       | FastAPI, Django           | _Pendiente_       |
-| Users Service    | Go                 | Node.js, Python           | _Pendiente_       |
-| Admin Service    | Go                 | Node.js, Python           | _Pendiente_       |
+| Mobile App       | React Native       | Flutter, Native           | Obligatorio       |
+| Admin Backoffice | Next.js            | Create React App, Vue.js  | Conveniencia      |
+| Content Service  | Python/Flask       | FastAPI, Django           | Versatilidad      |
+| Users Service    | Go                 | Node.js, Python           | Familiaridad      |
+| Admin Service    | Go                 | Node.js, Python           | Familiaridad      |
 
 **Criterios de decisión**:
 
@@ -44,6 +52,8 @@ Esta sección documenta las decisiones de arquitectura de alto nivel tomadas dur
 2. Performance requerida
 3. Ecosistema y comunidad
 4. Facilidad de deployment en GCP
+5. Practicidad en desarrollo
+6. Tiempo de entrega dado
 
 ---
 
@@ -71,8 +81,6 @@ Esta sección documenta las decisiones de arquitectura de alto nivel tomadas dur
 
 ## Manejo de Archivos Multimedia
 
-<!-- TODO: Completar con estrategia de almacenamiento -->
-
 **Contexto**: Las canciones y portadas necesitan almacenamiento escalable y eficiente para streaming.
 
 **Decisión**: Usar Google Cloud Storage con URLs firmadas.
@@ -94,15 +102,17 @@ Esta sección documenta las decisiones de arquitectura de alto nivel tomadas dur
 
 ## Base de Datos por Servicio
 
-<!-- TODO: Completar con justificación -->
+Decidimos utilizar las siguinetes base de datos por servicio:
+
+- Usuarios: Se utilizo MySQL para el modelado.
+- Colecciones: Se uso PostreSQL para modelerlas.
+- Canciones: Utilizamos el storage de GCP con un enfoque no relacional.
 
 **Contexto**: Evaluar si cada microservicio debería tener su propia base de datos o compartir una única instancia.
 
 **Decisión**: Cada servicio tiene su propia base de datos PostgreSQL.
 
 **Justificación**:
-
-- _Pendiente de completar_
 
 **Consecuencias**:
 
