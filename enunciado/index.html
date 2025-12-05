@@ -1,0 +1,4495 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación técnica de Melodia, plataforma de streaming de música">
+      
+      
+      
+        <link rel="canonical" href="https://melodia-fiuba.github.io/docs/enunciado/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>20252C - Melodia - Melodia - Documentación del Proyecto</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#melodia" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Melodia - Documentación del Proyecto" class="md-header__button md-logo" aria-label="Melodia - Documentación del Proyecto" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Melodia - Documentación del Proyecto
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              20252C - Melodia
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Melodia-FIUBA/docs" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Melodia-FIUBA/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../architecture/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Arquitectura e Infraestructura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../checkpoints/checkpoint-1/" class="md-tabs__link">
+          
+  
+  
+  Roadmap y Checkpoints
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../services/mobile-app/" class="md-tabs__link">
+          
+  
+  
+  Servicios
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../decisions-and-learnings/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Decisiones de Arquitectura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../known-issues/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Problemas Conocidos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Melodia - Documentación del Proyecto" class="md-nav__button md-logo" aria-label="Melodia - Documentación del Proyecto" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Melodia - Documentación del Proyecto
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Melodia-FIUBA/docs" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Melodia-FIUBA/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura e Infraestructura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap y Checkpoints
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Roadmap y Checkpoints
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpoints/checkpoint-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpoints/checkpoint-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpoints/checkpoint-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpoints/checkpoint-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkpoint 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Servicios
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Servicios
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/mobile-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mobile App
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/admin-backoffice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admin Backoffice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/songs-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/users-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/admin-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admin Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decisions-and-learnings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisiones de Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../known-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problemas Conocidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descripción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Índice
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Índice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Usuarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Perfil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-artistas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Artistas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-administracion-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Administración de Contenido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-administracion-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Administración de Usuarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-explorar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Explorar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-reproduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Reproducción
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Métricas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-biblioteca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Biblioteca
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-notificaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Notificaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-social" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Social
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-vibras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Vibras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-onboarding-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Onboarding Usuario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historias-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historias de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Usuarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Usuarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registro de usuarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-con-email-y-contrasena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login con email y contraseña
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-con-proveedor-federado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login con proveedor federado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recuperacion-de-contrasena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recuperación de contraseña
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Perfil
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edicion-de-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edición de perfil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-de-perfil-propio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización de perfil propio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-de-perfil-de-otros-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización de perfil de otros usuarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-artistas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Artistas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Artistas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perfil-del-artista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perfil del artista
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discografía
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colaboraciones-aparece-en" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colaboraciones (Aparece en)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popular-top-del-artista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Popular (Top del artista)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artistas-relacionados-similares-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artistas relacionados (Similares a)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-perfil-del-artista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión de perfil del artista
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publicacion-de-lanzamientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publicación de lanzamientos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disponibilidad-por-ventana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disponibilidad por ventana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autocompletar-metadatos-fast-complete-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autocompletar metadatos (“Fast Complete”) [IA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-administracion-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Administración de Usuarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Administración de Usuarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listar-usuarios-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listar usuarios del sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizar-perfil-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualizar perfil de usuario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloquear-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloquear usuario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-administracion-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Administración de Contenido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Administración de Contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#catalogo-explorar-y-buscar-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catálogo — Explorar y buscar contenido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catalogo-detalle-y-trazabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catálogo — Detalle y trazabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disponibilidad-por-region-y-ventana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disponibilidad por región y ventana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloqueo-y-desbloqueo-con-alcance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloqueo y desbloqueo con alcance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transiciones-y-estado-efectivo-del-catalogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transiciones y estado efectivo del catálogo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-explorar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Explorar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Explorar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#home" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Home
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busqueda-unificada-por-tipo-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Búsqueda unificada por tipo de contenido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navegacion-a-vistas-de-detalle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegación a vistas de detalle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#made-for-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Made For You
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-reproduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Reproducción
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Reproducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reproduccion-y-controles-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducción y Controles Básicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controles-avanzados-del-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controles avanzados del Player
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-cola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión de cola
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marcado-de-liked-songs-desde-el-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marcado de Liked Songs desde el Player
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videos-musicales-asociados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Videos Musicales Asociados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reproduccion-on-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducción On Demand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reproduccion-continua-autoplay-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducción Continua (autoplay) [IA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-biblioteca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Biblioteca
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Biblioteca">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-y-gestion-de-playlists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación y Gestión de Playlists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reordenamiento-de-contenido-en-playlists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reordenamiento de Contenido en Playlists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historial-de-reproduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historial de Reproducción
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liked-songs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liked Songs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-asistida-de-mood-mixes-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación Asistida de 'Mood Mixes' (IA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-notificaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Notificaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Notificaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notificacion-por-nuevo-contenido-y-actividad-seguida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notificación por nuevo contenido y actividad seguida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enrutamiento-al-hacer-clic-en-notificaciones-deep-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enrutamiento al hacer clic en notificaciones (Deep Link)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Métricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metricas-de-canciones-y-albumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas de canciones y álbumes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas de usuario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-de-artistas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas de artistas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-social" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Social
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Social">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seguimiento-de-perfiles-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguimiento de Perfiles de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-de-actividad-de-amigos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización de Actividad de Amigos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compartir-canciones-y-playlists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compartir Canciones y Playlists
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-vibras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Vibras
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Vibras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playlists-tematicas-por-contexto-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Playlists temáticas por contexto [IA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radio-por-cancion-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Radio por Canción [IA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-play-nuevo-contexto-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto Play (nuevo contexto) [IA]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epica-onboarding-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica: Onboarding Usuario
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Épica: Onboarding Usuario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#captura-inicial-de-generos-favoritos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Captura Inicial de Géneros Favoritos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asistente-de-artistas-favoritos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asistente de Artistas Favoritos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personalizacion-de-notificaciones-iniciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personalización de Notificaciones Iniciales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega-y-requerimientos-del-tp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrega y Requerimientos del TP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrega y Requerimientos del TP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplicación mobile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backoffice-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backoffice web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servicios backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tecnologias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tecnologias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-mobile_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplicación mobile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-backend_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servicios backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backoffice-web_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backoffice web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-multimedia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenido multimedia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notificaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notificaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notificaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#push" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Push
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mensajeria-whatsappsms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mensajeria whatsapp/SMS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoreo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoreo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empaquetamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empaquetamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ci-cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI-CD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despliegue-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Despliegue en la Nube
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despliegue-usando-k8s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Despliegue usando k8s
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instancias-de-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instancias de entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#___" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ___
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="melodia">Melodia<a class="headerlink" href="#melodia" title="Permanent link">&para;</a></h1>
+<p>Descubrí más. Escuchá mejor.</p>
+<p><img width="1260" height="763" alt="melodia-banner" src="https://github.com/user-attachments/assets/6e0887ca-ed38-4583-8114-e865b46fe6ba" /></p>
+<h2 id="descripcion">Descripción<a class="headerlink" href="#descripcion" title="Permanent link">&para;</a></h2>
+<p>Melodia no es solo un botón de play: ordena el caos infinito de música y lo convierte en algo simple. Canciones, colecciones y playlists aparecen justo donde tienen que estar, con un catálogo que se acomoda como si te conociera desde siempre. No hace falta rebuscar demasiado: lo que más te atrapa llega primero, lo nuevo se asoma en el momento justo y lo clásico siempre queda a mano. Todo se guarda, todo se comparte fácil, y siempre hay lugar para sorpresas que te cambien las vibras.</p>
+<h2 id="indice">Índice<a class="headerlink" href="#indice" title="Permanent link">&para;</a></h2>
+<h3 id="1-usuarios">1. Usuarios<a class="headerlink" href="#1-usuarios" title="Permanent link">&para;</a></h3>
+<p>Creación de usuarios básica, tanto para oyentes como artistas.</p>
+<ul>
+<li><a href="#registro-de-usuarios">Registro de usuarios</a></li>
+<li><a href="#login-con-email-y-contraseña">Login con email y contraseña</a></li>
+<li><a href="#login-con-proveedor-federado">Login con proveedor federado</a></li>
+<li><a href="#recuperación-de-contraseña">Recuperación de contraseña</a></li>
+</ul>
+<h3 id="2-perfil">2. Perfil<a class="headerlink" href="#2-perfil" title="Permanent link">&para;</a></h3>
+<p>Visualización de perfil propio o de otros usuarios de la plataforma.</p>
+<ul>
+<li><a href="#edición-de-perfil">Edición de perfil</a></li>
+<li><a href="#visualización-de-perfil-propio">Visualización de perfil propio</a></li>
+<li><a href="#visualización-de-perfil-de-otros-usuarios">Visualización de perfil de otros usuarios</a></li>
+</ul>
+<h3 id="3-artistas">3. Artistas<a class="headerlink" href="#3-artistas" title="Permanent link">&para;</a></h3>
+<p>Vista de detalle del artista, incluyendo su información, contenido multimedia y catálogo de música. Subida de contenido como artista, manejo de su estado de publicación.</p>
+<ul>
+<li><a href="#perfil-del-artista">Perfil del artista</a></li>
+<li><a href="#discografía">Discografía</a></li>
+<li><a href="#colaboraciones-aparece-en">Colaboraciones (Aparece en)</a></li>
+<li><a href="#popular-top-del-artista">Popular (Top del artista)</a></li>
+<li><a href="#artistas-relacionados-similares-a">Artistas relacionados (Similares a)</a></li>
+<li><a href="#gestión-de-perfil-del-artista">Gestión de perfil del artista</a></li>
+<li><a href="#publicación-de-lanzamientos">Publicación de lanzamientos</a></li>
+<li><a href="#disponibilidad-por-ventana">Disponibilidad por ventana</a></li>
+<li><a href="#autocompletar-metadatos-fast-complete-ia">Autocompletar metadatos (Fast Complete) [IA]</a></li>
+</ul>
+<h3 id="4-administracion-de-contenido">4. Administración de Contenido<a class="headerlink" href="#4-administracion-de-contenido" title="Permanent link">&para;</a></h3>
+<p>Creación y administración de contenido para los artistas: subida de canciones, edición de metadatos.</p>
+<ul>
+<li><a href="#catálogo--explorar-y-buscar-contenido">Catálogo — Explorar y buscar contenido</a></li>
+<li><a href="#catálogo--detalle-y-trazabilidad">Catálogo — Detalle y trazabilidad</a></li>
+<li><a href="#disponibilidad-por-región-y-ventana">Disponibilidad por región y ventana</a></li>
+<li><a href="#bloqueo-y-desbloqueo-con-alcance">Bloqueo y desbloqueo con alcance</a></li>
+<li><a href="#transiciones-y-estado-efectivo-del-catálogo">Transiciones y estado efectivo del catálogo</a></li>
+</ul>
+<h3 id="5-administracion-de-usuarios">5. Administración de Usuarios<a class="headerlink" href="#5-administracion-de-usuarios" title="Permanent link">&para;</a></h3>
+<p>Administración de la plataforma desde un backoffice web: control de usuarios, y de contenido subido.</p>
+<ul>
+<li><a href="#listar-usuarios-del-sistema">Listar usuarios del sistema</a></li>
+<li><a href="#visualizar-perfil-de-usuario">Visualizar perfil de usuario</a></li>
+<li><a href="#bloquear-usuario">Bloquear usuario</a></li>
+</ul>
+<h3 id="6-explorar">6. Explorar<a class="headerlink" href="#6-explorar" title="Permanent link">&para;</a></h3>
+<p>Exploración de contenido disponible en la plataforma: búsqueda y recomendaciones básicas (contenido más escuchado).</p>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#búsqueda-unificada-por-tipo-de-contenido">Búsqueda unificada por tipo de contenido</a></li>
+<li><a href="#navegación-a-vistas-de-detalle">Navegación a vistas de detalle</a></li>
+<li><a href="#made-for-you">Made For You</a></li>
+</ul>
+<h3 id="7-reproduccion">7. Reproducción<a class="headerlink" href="#7-reproduccion" title="Permanent link">&para;</a></h3>
+<p>Reproductor de contenido, con controles, cola de reproducción, administración de favoritos, autoplay.</p>
+<ul>
+<li><a href="#reproducción-y-controles-básicos">Reproducción y Controles Básicos</a></li>
+<li><a href="#controles-avanzados-del-player">Controles avanzados del Player</a></li>
+<li><a href="#gestión-de-cola">Gestión de cola</a></li>
+<li><a href="#marcado-de-liked-songs-desde-el-player">Marcado de Liked Songs desde el Player</a></li>
+<li><a href="#videos-musicales-asociados">Videos Musicales Asociados</a></li>
+<li><a href="#reproducción-on-demand">Reproducción On Demand</a></li>
+<li><a href="#reproducción-continua-autoplay-ia">Reproducción Continua (autoplay) [IA]</a></li>
+</ul>
+<h3 id="8-metricas">8. Métricas<a class="headerlink" href="#8-metricas" title="Permanent link">&para;</a></h3>
+<p>Rendimiento de negocio de la plataforma para administradores, incluyendo métricas de usuarios (actividad) y de contenido (más escuchado)</p>
+<ul>
+<li><a href="#métricas-de-canciones-y-álbumes">Métricas de canciones y álbumes</a></li>
+<li><a href="#métricas-de-usuario">Métricas de usuario</a></li>
+<li><a href="#métricas-de-artistas">Métricas de artistas</a></li>
+</ul>
+<h3 id="9-biblioteca">9. Biblioteca<a class="headerlink" href="#9-biblioteca" title="Permanent link">&para;</a></h3>
+<p>Playlists, favoritos, biblioteca personalizada para cada usuario.</p>
+<ul>
+<li><a href="#creación-y-gestión-de-playlists">Creación y Gestión de Playlists</a></li>
+<li><a href="#reordenamiento-de-contenido-en-playlists">Reordenamiento de Contenido en Playlists</a></li>
+<li><a href="#historial-de-reproducción">Historial de Reproducción</a></li>
+<li><a href="#liked-songs">Liked Songs</a></li>
+<li><a href="#creación-asistida-de-mood-mixes-ia">Creación Asistida de 'Mood Mixes' (IA)</a></li>
+</ul>
+<h3 id="10-notificaciones">10. Notificaciones<a class="headerlink" href="#10-notificaciones" title="Permanent link">&para;</a></h3>
+<p>Notificaciones push para alertar a usuario sobre nuevas actualizaciones de contenido o de actividad dentro de la plataforma.</p>
+<ul>
+<li><a href="#notificación-por-nuevo-contenido-y-actividad-seguida">Notificación por nuevo contenido y actividad seguida</a></li>
+<li><a href="#enrutamiento-al-hacer-clic-en-notificaciones-deep-link">Enrutamiento al hacer clic en notificaciones (Deep Link)</a></li>
+</ul>
+<h3 id="11-social">11. Social<a class="headerlink" href="#11-social" title="Permanent link">&para;</a></h3>
+<p>Actividades sociales: seguir usuarios, ver su historial de reproducción, compartir música interna y externamente.</p>
+<ul>
+<li><a href="#seguimiento-de-perfiles-de-usuario">Seguimiento de Perfiles de Usuario</a></li>
+<li><a href="#visualización-de-actividad-de-amigos">Visualización de Actividad de Amigos</a></li>
+<li><a href="#compartir-canciones-y-playlists">Compartir Canciones y Playlists</a></li>
+</ul>
+<h3 id="12-vibras">12. Vibras<a class="headerlink" href="#12-vibras" title="Permanent link">&para;</a></h3>
+<p>Recomendaciones: radios de artista, contenidos similares, playlists custom para ciertas horas del día o <em>moods</em></p>
+<ul>
+<li><a href="#playlists-temáticas-por-contexto-ia">Playlists temáticas por contexto [IA]</a></li>
+<li><a href="#radio-por-canción-ia">Radio por Canción [IA]</a></li>
+<li><a href="#auto-play-nuevo-contexto-ia">Auto Play (nuevo contexto) [IA]</a></li>
+</ul>
+<h3 id="13-onboarding-usuario">13. Onboarding Usuario<a class="headerlink" href="#13-onboarding-usuario" title="Permanent link">&para;</a></h3>
+<p>Preferencias custom para usuarios, así pueden indicar qué artistas o géneros les gustan antes de usar la plataforma y asistirlos en el descubrimiento de contenido que les guste.</p>
+<ul>
+<li><a href="#captura-inicial-de-géneros-favoritos">Captura Inicial de Géneros Favoritos</a></li>
+<li><a href="#asistente-de-artistas-favoritos">Asistente de Artistas Favoritos</a></li>
+<li><a href="#personalización-de-notificaciones-iniciales">Personalización de Notificaciones Iniciales</a></li>
+</ul>
+<hr />
+<h2 id="historias-de-usuario">Historias de Usuario<a class="headerlink" href="#historias-de-usuario" title="Permanent link">&para;</a></h2>
+<h2 id="epica-usuarios">Épica: Usuarios<a class="headerlink" href="#epica-usuarios" title="Permanent link">&para;</a></h2>
+<h3 id="registro-de-usuarios">Registro de usuarios<a class="headerlink" href="#registro-de-usuarios" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>nuevo usuario</strong>, quiero <strong>registrarme en la plataforma con mi correo electrónico</strong> para <strong>crear una cuenta y acceder a sus funcionalidades</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Registro exitoso con datos válidos</li>
+<li>Dado un nuevo usuario accede a la página de registro.</li>
+<li>
+<p>Entonces el usuario puede ingresar un nombre de usuario, correo electrónico y contraseña válidos y completar el registro.</p>
+</li>
+<li>
+<p>CA 2: Validación de correo electrónico duplicado</p>
+</li>
+<li>Dado un usuario intenta registrarse con un correo electrónico que ya está en uso.</li>
+<li>
+<p>Entonces el sistema muestra un mensaje de error indicando que el correo electrónico ya está registrado y el registro falla.</p>
+</li>
+<li>
+<p>CA 3: Validación de formato de correo electrónico</p>
+</li>
+<li>Dado un usuario intenta registrarse con un correo electrónico que no tiene un formato válido (ej. sin '@' o dominio).</li>
+<li>
+<p>Entonces el sistema muestra un mensaje de error indicando que el formato del correo electrónico es inválido y el registro falla.</p>
+</li>
+<li>
+<p>CA 4: Validación de fortaleza de contraseña</p>
+</li>
+<li>Dado un usuario intenta registrarse con una contraseña que no cumple con los requisitos de fortaleza (ej. muy corta, sin caracteres especiales).</li>
+<li>
+<p>Entonces el sistema muestra un mensaje de error indicando los requisitos de contraseña y el registro falla.</p>
+</li>
+<li>
+<p>CA 5: Selección de tipo de cuenta (Oyente / Artista)</p>
+</li>
+<li>Dado el formulario de registro</li>
+<li>Cuando elijo <strong>“Soy artista”</strong></li>
+<li>
+<p>Entonces la cuenta se crea con el <strong>rol Artista</strong> y queda habilitado el acceso a <strong>Gestión de perfil del artista</strong> y <strong>Publicación de lanzamientos</strong>.</p>
+</li>
+<li>
+<p>CA 6: Datos mínimos si elijo “Soy artista”</p>
+</li>
+<li>Dado que seleccioné <strong>“Soy artista”</strong> en el registro</li>
+<li>Cuando completo el alta</li>
+<li>Entonces se me solicita (o luego en el primer ingreso) <strong>Nombre artístico</strong>; si lo omito, el rol se crea igualmente y podré completarlo después en <strong>Gestión de perfil del artista</strong>.</li>
+</ul>
+<h3 id="login-con-email-y-contrasena">Login con email y contraseña<a class="headerlink" href="#login-con-email-y-contrasena" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>usuario registrado</strong>, quiero <strong>iniciar sesión con mi correo electrónico y contraseña</strong> para <strong>acceder de forma segura a mi cuenta</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Inicio de sesión exitoso con credenciales válidas</li>
+<li>Dado un usuario registrado accede a la página de inicio de sesión.</li>
+<li>
+<p>Entonces el usuario puede ingresar su correo electrónico y contraseña válidos y acceder a su cuenta.</p>
+</li>
+<li>
+<p>CA 2: Fallo de inicio de sesión con contraseña incorrecta</p>
+</li>
+<li>Dado un usuario registrado intenta iniciar sesión con su correo electrónico pero una contraseña incorrecta.</li>
+<li>
+<p>Entonces el sistema muestra un mensaje de error indicando que las credenciales son incorrectas y el inicio de sesión falla.</p>
+</li>
+<li>
+<p>CA 3: Fallo de inicio de sesión con correo electrónico no registrado</p>
+</li>
+<li>Dado un usuario intenta iniciar sesión con un correo electrónico que no está registrado en el sistema.</li>
+<li>
+<p>Entonces el sistema muestra un mensaje de error indicando que el correo electrónico no se encuentra y el inicio de sesión falla.</p>
+</li>
+<li>
+<p>CA 4: Opción de 'Olvidé mi contraseña'</p>
+</li>
+<li>Dado un usuario que olvidó su contraseña accede a la página de inicio de sesión.</li>
+<li>Entonces el usuario puede hacer clic en un enlace de 'Olvidé mi contraseña' para iniciar el proceso de recuperación.</li>
+</ul>
+<h3 id="login-con-proveedor-federado">Login con proveedor federado<a class="headerlink" href="#login-con-proveedor-federado" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 2 | Pack: U2 — Acceso Federado -->
+
+<p><strong>Descripción</strong>: Como <strong>usuario</strong>, quiero <strong>iniciar sesión o registrarme usando una cuenta de un proveedor federado como Google</strong> para <strong>acceder a la plataforma de forma rápida y sin crear nuevas credenciales</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Inicio de sesión exitoso con proveedor federado (ej. Google)</li>
+<li>Dado un usuario que ha vinculado su cuenta social accede a la página de inicio de sesión.</li>
+<li>
+<p>Entonces el usuario puede hacer clic en el botón de inicio de sesión social (ej. 'Iniciar sesión con Google') y ser redirigido al proveedor para autenticación.</p>
+</li>
+<li>
+<p>CA 2: Registro y inicio de sesión con proveedor federado</p>
+</li>
+<li>Dado un nuevo usuario que no tiene cuenta en Melodia utiliza el inicio de sesión social.</li>
+<li>
+<p>Entonces el sistema crea automáticamente una nueva cuenta para el usuario utilizando la información del proveedor social y lo inicia sesión.</p>
+</li>
+<li>
+<p>CA 3: Manejo de errores de autenticación del proveedor</p>
+</li>
+<li>Dado el proveedor federado (ej. Google) devuelve un error durante el proceso de autenticación.</li>
+<li>
+<p>Entonces el sistema muestra un mensaje de error al usuario indicando que no se pudo completar el inicio de sesión a través del proveedor.</p>
+</li>
+<li>
+<p>CA 4: Vinculación de cuenta social a cuenta existente</p>
+</li>
+<li>Dado un usuario existente en Melodia intenta vincular su cuenta social a su cuenta.</li>
+<li>Entonces el usuario puede vincular exitosamente su cuenta social a su cuenta de Melodia para futuros inicios de sesión.</li>
+</ul>
+<h3 id="recuperacion-de-contrasena">Recuperación de contraseña<a class="headerlink" href="#recuperacion-de-contrasena" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>usuario registrado</strong>, quiero <strong>recuperar el acceso a mi cuenta si olvido mi contraseña</strong> para <strong>restablecerla de forma segura y volver a iniciar sesión</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Solicitud de restablecimiento de contraseña exitosa</li>
+<li>Dado un usuario registrado que ha olvidado su contraseña</li>
+<li>
+<p>Entonces el usuario recibe un correo electrónico con un enlace para restablecer su contraseña.</p>
+</li>
+<li>
+<p>CA 2: Restablecimiento de contraseña con enlace válido</p>
+</li>
+<li>Dado un usuario que hace clic en el enlace de restablecimiento de contraseña recibido por correo electrónico</li>
+<li>
+<p>Entonces se le presenta una página segura donde puede ingresar una nueva contraseña.</p>
+</li>
+<li>
+<p>CA 3: Restablecimiento de contraseña con éxito</p>
+</li>
+<li>Dado un usuario que ingresa y confirma una nueva contraseña válida</li>
+<li>
+<p>Entonces la contraseña del usuario se actualiza y puede iniciar sesión con la nueva contraseña.</p>
+</li>
+<li>
+<p>CA 4: Intento de restablecimiento de contraseña con enlace expirado</p>
+</li>
+<li>Dado un usuario que intenta usar un enlace de restablecimiento de contraseña que ha expirado</li>
+<li>Entonces se le informa que el enlace ha expirado y se le ofrece la opción de solicitar un nuevo restablecimiento.</li>
+</ul>
+<hr />
+<h2 id="epica-perfil">Épica: Perfil<a class="headerlink" href="#epica-perfil" title="Permanent link">&para;</a></h2>
+<h3 id="edicion-de-perfil">Edición de perfil<a class="headerlink" href="#edicion-de-perfil" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>usuario</strong>, quiero <strong>editar la información de mi perfil, incluyendo mi foto y preferencias</strong> para <strong>mantener mis datos actualizados y personalizar mi experiencia</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Edición exitosa de información básica del perfil</li>
+<li>Dado un usuario autenticado que navega a la sección de edición de perfil</li>
+<li>
+<p>Entonces el usuario puede modificar su nombre, apellido y correo electrónico.</p>
+</li>
+<li>
+<p>CA 2: Actualización de información de contacto</p>
+</li>
+<li>Dado un usuario autenticado que edita su perfil</li>
+<li>
+<p>Entonces el usuario puede actualizar su número de teléfono y dirección.</p>
+</li>
+<li>
+<p>CA 3: Cambio de foto de perfil</p>
+</li>
+<li>Dado un usuario autenticado que edita su perfil</li>
+<li>
+<p>Entonces el usuario puede subir una nueva foto de perfil.</p>
+</li>
+<li>
+<p>CA 4: Guardado de cambios en el perfil</p>
+</li>
+<li>Dado un usuario autenticado que ha realizado cambios en su perfil</li>
+<li>
+<p>Entonces al hacer clic en el botón 'Guardar', los cambios se reflejan en su perfil.</p>
+</li>
+<li>
+<p>CA 5: Cancelación de edición de perfil</p>
+</li>
+<li>Dado un usuario autenticado que ha realizado cambios en su perfil pero no desea guardarlos</li>
+<li>
+<p>Entonces al hacer clic en el botón 'Cancelar', los cambios no se guardan y el perfil permanece sin modificaciones.</p>
+</li>
+<li>
+<p>CA 6: Preferencias de contenido</p>
+</li>
+<li>Dado un usuario autenticado en la edición de perfil</li>
+<li>Cuando cambia la preferencia <strong>Filtro ON/OFF</strong></li>
+<li>Entonces esa preferencia se guarda en su perfil y afecta la reproducción y listados.</li>
+</ul>
+<h3 id="visualizacion-de-perfil-propio">Visualización de perfil propio<a class="headerlink" href="#visualizacion-de-perfil-propio" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>usuario</strong>, quiero <strong>ver mi propio perfil</strong> para <strong>consultar mi información y acceder a las opciones de edición</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Visualización de información básica del perfil</li>
+<li>Dado un usuario autenticado que navega a su página de perfil</li>
+<li>
+<p>Entonces se muestra su nombre, apellido y correo electrónico.</p>
+</li>
+<li>
+<p>CA 2: Visualización de información de contacto</p>
+</li>
+<li>Dado un usuario autenticado que visualiza su perfil</li>
+<li>
+<p>Entonces se muestra su número de teléfono y dirección.</p>
+</li>
+<li>
+<p>CA 3: Visualización de la foto de perfil</p>
+</li>
+<li>Dado un usuario autenticado que visualiza su perfil</li>
+<li>
+<p>Entonces se muestra su foto de perfil actual.</p>
+</li>
+<li>
+<p>CA 4: Acceso a la opción de edición de perfil</p>
+</li>
+<li>Dado un usuario autenticado que visualiza su perfil</li>
+<li>Entonces existe un botón o enlace visible para editar su perfil.</li>
+</ul>
+<h3 id="visualizacion-de-perfil-de-otros-usuarios">Visualización de perfil de otros usuarios<a class="headerlink" href="#visualizacion-de-perfil-de-otros-usuarios" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 2 | Pack: P3. Social + Notificaciones -->
+
+<p><strong>Descripción</strong>: Como <strong>usuario</strong>, quiero <strong>ver el perfil de otros usuarios</strong> para <strong>conocer su actividad reciente y decidir si quiero seguirlos</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Visualización de información básica del perfil</li>
+<li>Dado un usuario está viendo el perfil de otro usuario</li>
+<li>
+<p>Entonces debe poder ver el nombre de usuario, foto de perfil y una breve biografía.</p>
+</li>
+<li>
+<p>CA 2: Actividad reciente del usuario</p>
+</li>
+<li>Dado un usuario está viendo el perfil de otro usuario</li>
+<li>
+<p>Entonces debe poder ver una lista de la actividad reciente (p. ej., 'Me Gusta', playlists públicas) de ese usuario.</p>
+</li>
+<li>
+<p>CA 3: Botón de acción en el perfil</p>
+</li>
+<li>Dado un usuario está viendo el perfil de otro usuario</li>
+<li>Entonces debe existir un botón para seguir/dejar de seguir.</li>
+</ul>
+<hr />
+<h2 id="epica-artistas">Épica: Artistas<a class="headerlink" href="#epica-artistas" title="Permanent link">&para;</a></h2>
+<h3 id="perfil-del-artista">Perfil del artista<a class="headerlink" href="#perfil-del-artista" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como oyente, quiero ver el perfil del artista con su identidad, métrica clave y acciones principales para empezar a escuchar o seguirlo.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Identidad visual</li>
+<li>Dado el perfil del artista</li>
+<li>Cuando carga el header y el avatar</li>
+<li>
+<p>Entonces veo <strong>nombre del artista</strong>, <strong>imagen/cover</strong> (o fallback) si aplica.</p>
+</li>
+<li>
+<p>CA 2: Métrica de oyentes mensuales</p>
+</li>
+<li>Dado el perfil del artista</li>
+<li>Cuando hay dato disponible</li>
+<li>Entonces se muestra <strong>oyentes mensuales</strong>.</li>
+<li>
+<p>Y la métrica se <strong>actualiza diariamente</strong> (valor mensual).</p>
+</li>
+<li>
+<p>CA 3: Acciones principales</p>
+</li>
+<li>Dado el perfil del artista</li>
+<li>Cuando uso los controles</li>
+<li>Entonces puedo <strong>Seguir/Dejar de seguir</strong>, <strong>Play</strong> y <strong>Shuffle</strong>.</li>
+<li>
+<p><strong>Play</strong> inicia desde el <strong>#1 de Popular</strong> y <strong>Shuffle</strong> mezcla las <strong>10 populares</strong>.</p>
+</li>
+<li>
+<p>CA 4: Estructura de la página del perfil</p>
+</li>
+<li>Dado el perfil del artista</li>
+<li>Cuando scrolleo el contenido</li>
+<li>
+<p>Entonces encuentro los módulos en este orden: <strong>Popular → Liked Songs -&gt; Artist Pick -&gt; Discography → → About -&gt; Appears On → Similar Artists</strong>.</p>
+</li>
+<li>
+<p>CA 5: Liked songs del artista</p>
+</li>
+<li>Dado que tengo <strong>≥1</strong> canción de este artista en <strong>Liked Songs</strong></li>
+<li>Cuando abro su perfil</li>
+<li>Entonces veo un bloque “Liked songs (N)” que abre una colección filtrada por el artista (orden: más reciente).</li>
+</ul>
+<h3 id="discografia">Discografía<a class="headerlink" href="#discografia" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como oyente, quiero ver la discografía oficial del artista (sus lanzamientos propios) desde su perfil para encontrar rápido qué escuchar.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Pestañas y alcance</li>
+<li>Dado el perfil de un artista</li>
+<li>Cuando abro la sección <strong>Discografía</strong></li>
+<li>
+<p>Entonces veo las pestañas <strong>Popular releases · Albums · Singles &amp; EPs</strong>; se listan <strong>solo releases del artista como primario</strong> (no playlists ni colaboraciones).</p>
+</li>
+<li>
+<p>CA 2: Orden por pestaña</p>
+</li>
+<li>Dado cada pestaña de la sección</li>
+<li>Cuando se muestran sus ítems</li>
+<li>
+<p>Entonces:</p>
+<ul>
+<li><strong>Popular releases</strong> usa el <strong>ranking de popularidad reciente</strong> del catálogo.</li>
+<li><strong>Albums</strong> se ordena por <strong>fecha de publicación descendente</strong>.</li>
+<li><strong>Singles &amp; EPs</strong> se ordena por <strong>fecha de publicación descendente</strong>.</li>
+<li>En todos los casos, a igualdad de criterios, se <strong>desempata alfabéticamente</strong> y, si corresponde, el ítem más nuevo muestra el <strong>badge “Latest release”</strong>.</li>
+</ul>
+</li>
+<li>
+<p>CA 3: Tarjetas y navegación</p>
+</li>
+<li>Dado un lanzamiento en cualquier pestaña</li>
+<li>Cuando se renderiza su tarjeta</li>
+<li>Entonces muestra <strong>portada, título, año</strong> y <strong>chip de tipo</strong> (<em>Album/EP/Single</em>), y <strong>al tocar imagen o título</strong> navego a la <strong>ficha del release</strong>.</li>
+<li>
+<p>Y para <strong>Single</strong>, se trata como <strong>colección</strong> (de <strong>1 canción</strong>).</p>
+</li>
+<li>
+<p>CA 4: Próximos (programados)</p>
+</li>
+<li>Dado que existen lanzamientos con <strong>fecha futura</strong> del artista</li>
+<li>Cuando consulto <strong>Albums</strong> o <strong>Singles &amp; EPs</strong></li>
+<li>Entonces aparece un bloque <strong>Próximos</strong> con cada tarjeta mostrando <strong>fecha/hora</strong> (y <strong>cuenta regresiva</strong> si aplica) y, si está configurado, <strong>Pre-save</strong>; la <strong>reproducción</strong> está <strong>deshabilitada</strong> hasta la vigencia, excepto <strong>canciones liberadas anticipadamente</strong>, que sí son reproducibles.</li>
+</ul>
+<h3 id="colaboraciones-aparece-en">Colaboraciones (Aparece en)<a class="headerlink" href="#colaboraciones-aparece-en" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 3 | Pack: A3 — “Aparece en” -->
+
+<p><strong>Descripción</strong>: En el perfil del artista, muestra lanzamientos y playlists donde el artista participa (primario o creditado) para descubrir rápidamente esas apariciones.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Fuentes y alcance</li>
+<li>Dado el perfil de un artista</li>
+<li>
+<p>Entonces la sección <strong>Aparece en</strong> incluye <strong>Álbum/EP/Single</strong> y <strong>Playlists públicas</strong> que contengan ≥1 canción del artista (como principal o en créditos).</p>
+</li>
+<li>
+<p>CA 2: Presentación y navegación</p>
+</li>
+<li>Dado un ítem de la sección</li>
+<li>Cuando se renderiza su tarjeta</li>
+<li>
+<p>Entonces muestra <strong>portada</strong>, <strong>título</strong>, <strong>chip de tipo</strong> (<em>Álbum/EP</em> o <em>Playlist</em> o <em>Single</em>) y <strong>año</strong>; al tocar <strong>imagen o título</strong> navego al <strong>detalle</strong> con la <strong>lista en el formato correspondiente</strong>.</p>
+</li>
+<li>
+<p>CA 3: Cantidad visible y orden</p>
+</li>
+<li>Dado que hay resultados</li>
+<li>Cuando se compone el carrusel/grilla</li>
+<li>Entonces se listan <strong>4–6</strong> tarjetas y se ordenan así:<ul>
+<li><strong>Releases (Álbum/EP/Single):</strong> <strong>fecha de publicación descendente</strong> (desempate alfabético).</li>
+<li><strong>Playlists públicas:</strong> <strong>popularidad reciente</strong> con <strong>desempate alfabético</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="popular-top-del-artista">Popular (Top del artista)<a class="headerlink" href="#popular-top-del-artista" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: En el <strong>perfil del artista</strong>, muestra una lista <strong>automática</strong> de sus canciones más escuchados para empezar a reproducir rápido.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Fuente y alcance del ranking</li>
+<li>Dado el perfil de un artista</li>
+<li>Cuando se calcula <strong>popularidad reciente</strong></li>
+<li>
+<p>Entonces devuelve un set de <strong>canciones del artista</strong> (como principal o creditado) ordenadas por <strong>escucha real y señales de interacción</strong> (reproducciones, guardados, compartidos); el ranking se <strong>actualiza periódicamente</strong> con la actividad más reciente.</p>
+</li>
+<li>
+<p>CA 2: Presentación</p>
+</li>
+<li>Dado la sección <strong>Popular</strong></li>
+<li>
+<p>Entonces muestra <strong>5 ítems</strong> por defecto y cada fila incluye <strong># de posición</strong>, <strong>título</strong>, <strong>badges</strong> (p. ej., <strong>video</strong> si aplica) y <strong>duración</strong>.</p>
+</li>
+<li>
+<p>CA 3: Reproducción desde Popular</p>
+</li>
+<li>Dado la lista <strong>Popular</strong></li>
+<li>Cuando toco una canción</li>
+<li>Entonces se <strong>reproduce ahora</strong> y el <strong>contexto</strong> pasa a ser <strong>Popular de {Artista}</strong>; los <strong>Siguientes</strong> son el resto de la lista en el <strong>orden mostrado</strong> (o <strong>Shuffle</strong> si está activo).</li>
+</ul>
+<h3 id="artistas-relacionados-similares-a">Artistas relacionados (Similares a)<a class="headerlink" href="#artistas-relacionados-similares-a" title="Permanent link">&para;</a></h3>
+<!-- Status: OPTATIVA (como piensan hacer esto????) -->
+
+<p><strong>Descripción</strong>: En el perfil del artista, muestra <strong>solo artistas</strong> afines para descubrir artistas similares.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Fuente de similitud</li>
+<li>Dado el artista en foco</li>
+<li>
+<p>Entonces devuelve una <strong>lista de artistas</strong> (no playlists/álbumes) basada en el <strong>género</strong> de las sus canciones y colaboraciones, ponderadas por <strong>actividad reciente</strong>.</p>
+</li>
+<li>
+<p>CA 2: Presentación y navegación</p>
+</li>
+<li>Dado la grilla “Similares a {Artista}”</li>
+<li>
+<p>Entonces se muestran tarjetas con <strong>avatar</strong> y <strong>nombre</strong>; <strong>al tocar la imagen o el nombre navego al perfil del artista</strong>.</p>
+</li>
+<li>
+<p>CA 3: Orden y variación controlada</p>
+</li>
+<li>Dado el ranking de similares</li>
+<li>Cuando hay empates</li>
+<li>Entonces se desempata por <strong>popularidad reciente</strong>; que cambia periodicamente, solo <strong>desde la posición 3 en adelante</strong> para variar exposición sin alterar el <strong>top 3</strong>.</li>
+</ul>
+<h3 id="gestion-de-perfil-del-artista">Gestión de perfil del artista<a class="headerlink" href="#gestion-de-perfil-del-artista" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>artista</strong>, quiero <strong>gestionar mi perfil público</strong> para <strong>presentar mi proyecto y dirigir a mis fans a mis redes oficiales</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Identidad visual del perfil (header)</li>
+<li>Dado que soy artista autenticado</li>
+<li>Cuando subo/actualizo <strong>imagen de perfil (avatar)</strong> y/o <strong>banner</strong> y guardo</li>
+<li>
+<p>Entonces el <strong>header</strong> del perfil muestra las nuevas imágenes.</p>
+</li>
+<li>
+<p>CA 2: About — Bio</p>
+</li>
+<li>Dado que edito la sección <strong>About</strong></li>
+<li>Cuando actualizo el <strong>texto de bio y los links a mis redes</strong> y guardo</li>
+<li>
+<p>Entonces la bio se muestra en <strong>About</strong> con el formato básico y los links de las redes oficiales (párrafos/saltos de línea).</p>
+</li>
+<li>
+<p>CA 3: About — Carrusel de imágenes</p>
+</li>
+<li>Dado que gestiono <strong>About</strong></li>
+<li>Cuando <strong>selecciono hasta 5 imágenes</strong> destacadas, puedo <strong>reordenarlas</strong> y <strong>definir una principal</strong></li>
+<li>
+<p>Entonces en el perfil se muestra un <strong>carrusel</strong> navegable con esas imágenes (toca/clic para ampliar); si no hay imágenes seleccionadas, <strong>no se muestra el carrusel</strong>.</p>
+</li>
+<li>
+<p>CA 4: Artist Pick (destacado único — álbum/EP/single/playlist)</p>
+</li>
+<li>Dado que soy artista, en mi perfil</li>
+<li>Cuando elijo un contenido relacionado de mi catálogo o una playlist hecha por el artista.</li>
+<li>Entonces puedo fijarlo como Artist pick.</li>
+</ul>
+<!-- revisar si tenemos que agregar la gestion de playlist como ca's-->
+
+<h3 id="publicacion-de-lanzamientos">Publicación de lanzamientos<a class="headerlink" href="#publicacion-de-lanzamientos" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como artista, quiero cargar metadatos y assets y elegir <strong>Publicar ahora</strong> o <strong>Programar</strong> una fecha para que mi música quede disponible según las políticas de disponibilidad.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Alta guiada y validaciones</li>
+<li>Dado que inicio un lanzamiento</li>
+<li>Cuando completo <strong>título, genero(s) , créditos (artistas colaboradores), portada y audio</strong></li>
+<li>
+<p>Entonces puedo <strong>Publicar ahora</strong> o <strong>Programar</strong>; si falta algún requisito, no permite continuar y muestra el motivo.</p>
+</li>
+<li>
+<p>CA 2: Publicar ahora / Programar</p>
+</li>
+<li>Dado que elijo <strong>Publicar ahora</strong></li>
+<li>Entonces el lanzamiento queda <strong>Publicado</strong> respetando territorios configurados.</li>
+<li>Dado que elijo <strong>Programar</strong> (fecha/hora + zona)</li>
+<li>
+<p>Entonces el lanzamiento queda <strong>Programado</strong> hasta la vigencia.</p>
+</li>
+<li>
+<p>CA 3: Canciones anticipadas y Pre-save (opcional)</p>
+</li>
+<li>Dado un singles/álbum/EP <strong>Programado</strong></li>
+<li>Cuando marco <strong>canciones anticipadas</strong></li>
+<li>
+<p>Entonces esas canciones son <strong>reproducibles</strong> antes de la fecha; la colección sigue <strong>Programado</strong> y admite <strong>Pre-save</strong> si se configuró.</p>
+</li>
+<li>
+<p>CA 4: Edición posterior</p>
+</li>
+<li>Dado un lanzamiento <strong>Programado o Publicado</strong></li>
+<li>Cuando edito metadatos no críticos (p. ej., créditos, portada, descripción, fecha de lanzamiento, territorios, etc.)</li>
+<li>
+<p>Entonces los cambios se guardan</p>
+</li>
+<li>
+<p>CA 5: Ubicación de la canción</p>
+</li>
+<li>Dado que cargo una canción</li>
+<li>Cuando defino su destino</li>
+<li>Entonces puedo:<ul>
+<li><strong>Single</strong>: crear/usar un <strong>colección tipo Single</strong> (1 canción).</li>
+<li><strong>EP/Álbum</strong>: agregarla a un <strong>release del artista no publicado o programado</strong> (o crear uno nuevo) y definir <strong>orden</strong>. <em>Si el release ya está publicado, no se admiten nuevas canciones.</em></li>
+<li><strong>Playlists hecha por el artista</strong>: añadir <strong>solo si la canción está Publicada</strong> (o <strong>anticipada</strong>).</li>
+</ul>
+</li>
+</ul>
+<h3 id="disponibilidad-por-ventana">Disponibilidad por ventana<a class="headerlink" href="#disponibilidad-por-ventana" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 3 | Pack: C8 — Creator Autogestión + IA -->
+
+<p><strong>Descripción</strong>: Como artista, quiero definir una <strong>ventana de publicación</strong> para controlar cuándo se expone mi lanzamiento.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Configuración</li>
+<li>Dado el editor de disponibilidad</li>
+<li>Cuando selecciono una <strong>fecha/hora</strong> con zona</li>
+<li>
+<p>Entonces guardo una <strong>política</strong> que determina <strong>No-disponible</strong> y/o <strong>Programado</strong>.</p>
+</li>
+<li>
+<p>CA 2: Activación automática y prioridad</p>
+</li>
+<li>Dado un lanzamiento <strong>Programado</strong></li>
+<li>Cuando llega la <strong>vigencia</strong></li>
+<li>Entonces pasa a <strong>Publicado</strong> automáticamente y se registra en <strong>auditoría</strong>.</li>
+<li>Si existe <strong>Bloqueado-admin</strong>, la reproducción permanece <strong>deshabilitada</strong> hasta levantar el bloqueo.</li>
+<li>
+<p>El <strong>estado efectivo</strong> respeta siempre la prioridad: <strong>Bloqueado-admin &gt; No-disponible-región &gt; Programado &gt; Publicado</strong>.</p>
+</li>
+<li>
+<p>CA 4: Cambios posteriores</p>
+</li>
+<li>Dado que modifico <strong>la fecha</strong></li>
+<li>Cuando guardo</li>
+<li>Entonces el <strong>estado efectivo</strong> se recalcula de inmediato en todas las superficies y se registra en <strong>auditoría</strong>.</li>
+</ul>
+<h3 id="autocompletar-metadatos-fast-complete-ia">Autocompletar metadatos (“Fast Complete”) [IA]<a class="headerlink" href="#autocompletar-metadatos-fast-complete-ia" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 5 | Pack: C8 — Creator Autogestión + IA -->
+
+<p><strong>Descripción</strong>: Como <strong>artista</strong> que está dando de alta un canción, quiero <strong>ingresar una referencia rápida</strong> (p. ej., <em>"Artista – Título"</em>) para que el sistema <strong>proponga automáticamente los metadatos</strong> y yo solo <strong>revise y ajuste</strong> antes de guardar.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Entrada flexible</li>
+<li>Dado el formulario de alta de canción</li>
+<li>Cuando uso el campo <strong>Fast Complete</strong></li>
+<li>
+<p>Entonces acepta formatos comunes (<em>"Artista – Título"</em>, <em>"Título – Artista"</em> o solo título).</p>
+</li>
+<li>
+<p>CA 2: Propuesta de metadatos</p>
+</li>
+<li>Dado que confirmo la entrada en <strong>Fast Complete</strong></li>
+<li>
+<p>Entonces el sistema propone <strong>título</strong>, <strong>artista(s) primarios</strong>, <strong>creditos (colaboradores)</strong>, <strong>género(s)</strong>, <strong>moods/temáticas</strong>, <strong>año</strong> y <strong>créditos</strong> básicos.</p>
+</li>
+<li>
+<p>CA 3: Revisión y fusión por campo</p>
+</li>
+<li>Dado que se muestran sugerencias</li>
+<li>
+<p>Entonces puedo <strong>aceptar/editar</strong> cada campo; <strong>nada se publica sin confirmación</strong>.</p>
+</li>
+<li>
+<p>CA 4: Desambiguación guiada</p>
+</li>
+<li>Dado que la referencia es ambigua</li>
+<li>
+<p>Entonces se muestran <strong>hasta 3 opciones</strong> con detalles para seleccionar o continuar manualmente.</p>
+</li>
+<li>
+<p>CA 5: Persistencia y fallback</p>
+</li>
+<li>Dado que acepto las sugerencias</li>
+<li>Entonces se <strong>rellenan en el formulario</strong>; puedo <strong>re-ejecutar</strong> Fast Complete manteniendo cambios confirmados; si la sugerencia falla, se muestra un <strong>mensaje breve</strong> y continúo en <strong>modo manual</strong>.</li>
+</ul>
+<hr />
+<h2 id="epica-administracion-de-usuarios">Épica: Administración de Usuarios<a class="headerlink" href="#epica-administracion-de-usuarios" title="Permanent link">&para;</a></h2>
+<h3 id="listar-usuarios-del-sistema">Listar usuarios del sistema<a class="headerlink" href="#listar-usuarios-del-sistema" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>administrador</strong>, quiero <strong>ver un listado de usuarios con su información básica y acciones disponibles</strong> para <strong>gestionar roles, estados y operaciones comunes</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Listado de todos los usuarios</li>
+<li>Dado un usuario con rol de administrador accede a la sección de gestión de usuarios</li>
+<li>
+<p>Entonces debe poder ver una lista de todos los usuarios registrados en el sistema.</p>
+</li>
+<li>
+<p>CA 2: Información básica del usuario en la lista</p>
+</li>
+<li>Dado un usuario con rol de administrador está viendo la lista de usuarios</li>
+<li>
+<p>Entonces cada usuario en la lista debe mostrar su nombre de usuario, correo electrónico y rol.</p>
+</li>
+<li>
+<p>CA 3: Acciones de administración</p>
+</li>
+<li>Dado un usuario con rol de administrador está viendo la lista de usuarios</li>
+<li>Entonces debe poder realizar acciones como editar rol, desactivar o eliminar un usuario.</li>
+</ul>
+<h3 id="visualizar-perfil-de-usuario">Visualizar perfil de usuario<a class="headerlink" href="#visualizar-perfil-de-usuario" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 2 | Pack: P11. Backoffice Usuarios Plus -->
+
+<p><strong>Descripción</strong>: Como <strong>administrador</strong>, quiero <strong>ver el perfil detallado de un usuario</strong> para <strong>revisar su estado (activo/bloqueado), fechas clave y rol</strong>, incluso cuando no hay usuarios.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Visualizar información básica del usuario</li>
+<li>Dado como administrador, estoy en la página de gestión de usuarios</li>
+<li>
+<p>Entonces puedo ver una lista de todos los usuarios registrados con su nombre, correo electrónico y estado (activo/bloqueado).</p>
+</li>
+<li>
+<p>CA 2: Ver detalles completos del perfil de un usuario específico</p>
+</li>
+<li>Dado como administrador, estoy viendo la lista de usuarios y selecciono un usuario específico</li>
+<li>
+<p>Entonces se me redirige a una página de perfil detallado donde puedo ver toda la información del usuario, incluyendo su fecha de registro, última conexión y rol.</p>
+</li>
+<li>
+<p>CA 3: Manejar la ausencia de usuarios</p>
+</li>
+<li>Dado como administrador, estoy en la página de gestión de usuarios y no hay usuarios registrados</li>
+<li>Entonces se muestra un mensaje indicando que no hay usuarios disponibles.</li>
+</ul>
+<h3 id="bloquear-usuario">Bloquear usuario<a class="headerlink" href="#bloquear-usuario" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>administrador</strong>, quiero <strong>bloquear o desbloquear usuarios</strong> para <strong>controlar el acceso y prevenir abusos</strong>, con confirmación y trazabilidad.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Bloquear un usuario activo</li>
+<li>Dado como administrador, estoy viendo el perfil de un usuario activo</li>
+<li>
+<p>Entonces puedo hacer clic en un botón 'Bloquear usuario', y el estado del usuario cambia a 'Bloqueado'.</p>
+</li>
+<li>
+<p>CA 2: Desbloquear un usuario bloqueado</p>
+</li>
+<li>Dado como administrador, estoy viendo el perfil de un usuario bloqueado</li>
+<li>
+<p>Entonces puedo hacer clic en un botón 'Desbloquear usuario', y el estado del usuario cambia a 'Activo'.</p>
+</li>
+<li>
+<p>CA 3: Confirmación de la acción de bloqueo/desbloqueo</p>
+</li>
+<li>Dado como administrador, intento bloquear o desbloquear un usuario</li>
+<li>
+<p>Entonces aparece un mensaje de confirmación antes de que la acción se complete, y una notificación de éxito o error después de la acción.</p>
+</li>
+<li>
+<p>CA 4: Impedir acciones para usuarios bloqueados</p>
+</li>
+<li>Dado un usuario está bloqueado</li>
+<li>Entonces el usuario no puede iniciar sesión ni realizar ninguna acción dentro de la aplicación.</li>
+</ul>
+<hr />
+<h2 id="epica-administracion-de-contenido">Épica: Administración de Contenido<a class="headerlink" href="#epica-administracion-de-contenido" title="Permanent link">&para;</a></h2>
+<h3 id="catalogo-explorar-y-buscar-contenido">Catálogo — Explorar y buscar contenido<a class="headerlink" href="#catalogo-explorar-y-buscar-contenido" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>administrador</strong>, quiero <strong>listar y encontrar rápidamente</strong> contenido del catálogo (<strong>Canciones</strong> y <strong>Colecciones</strong>) para <strong>ver su estado y accionar</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Tabla de catálogo</li>
+<li>Dado que ingreso a <strong>Administración → Catálogo</strong></li>
+<li>Cuando carga la vista</li>
+<li>
+<p>Entonces veo una tabla con: <strong>Tipo (Canción/Colección)</strong>, <strong>Título</strong>, <strong>Artista principal</strong>, <strong>Colección</strong> (si es Canción), <strong>Fecha de publicación</strong> (si aplica), <strong>Estado efectivo</strong> (Programado / Publicado / No-disponible-región / Bloqueado-admin) y <strong>Acciones</strong> (Abrir detalle, Editar metadatos, Editar disponibilidad, Bloquear/Desbloquear).</p>
+</li>
+<li>
+<p>CA 2: Búsqueda</p>
+</li>
+<li>Dado el campo de búsqueda</li>
+<li>Cuando ingreso un término</li>
+<li>
+<p>Entonces busca por <strong>título</strong>, <strong>artista</strong> y <strong>colección</strong>, y <strong>resalta</strong> coincidencias.</p>
+</li>
+<li>
+<p>CA 3: Filtros y orden</p>
+</li>
+<li>Dado que necesito acotar resultados</li>
+<li>Cuando filtro por <strong>Tipo</strong>, <strong>Estado efectivo</strong>, <strong>Rango de fecha de publicación</strong>, <strong>Tiene video</strong> (sí/no) y <strong>Región</strong></li>
+<li>Entonces la tabla muestra solo los ítems que cumplen y <strong>filtros/orden</strong> <strong>persisten en la URL</strong>.</li>
+</ul>
+<h3 id="catalogo-detalle-y-trazabilidad">Catálogo — Detalle y trazabilidad<a class="headerlink" href="#catalogo-detalle-y-trazabilidad" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>administrador</strong>, quiero ver el <strong>detalle</strong> de una <strong>Canción</strong> o <strong>Colección</strong> para <strong>entender metadatos, disponibilidad, apariciones y los cambios relevantes</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Pestañas</li>
+<li>Dado que abro un detalle</li>
+<li>
+<p>Entonces veo <strong>Resumen</strong>, <strong>Disponibilidad</strong>, <strong>Apariciones</strong> y <strong>Auditoría</strong>.</p>
+</li>
+<li>
+<p>CA 2: Resumen</p>
+</li>
+<li>Dado la pestaña <strong>Resumen</strong></li>
+<li>
+<p>Entonces:</p>
+<ul>
+<li><strong>Canción</strong> → <strong>título</strong>, <strong>artista(s)</strong>, <strong>colección + año</strong> (si aplica), <strong>posición</strong> en la <strong>lista de canciones</strong>, <strong>duración</strong>, <strong>explícito/video</strong> (si aplica); <strong>acciones</strong>: <em>Editar metadatos</em>, <em>Abrir detalle de Colección</em>.</li>
+<li><strong>Colección</strong> → <strong>cover</strong>, <strong>título</strong>, <strong>tipo</strong> (Álbum/EP/Single/Playlist), <strong>año</strong> (si aplica), <strong>owner/privacidad</strong> (si es Playlist), <strong>lista de canciones</strong> (posición + duración), <strong>explícito/video</strong> (si aplica); <strong>acciones</strong>: <em>Editar metadatos</em>.</li>
+</ul>
+</li>
+<li>
+<p>CA 3: Disponibilidad</p>
+</li>
+<li>Dado la pestaña <strong>Disponibilidad</strong></li>
+<li>
+<p>Entonces veo el <strong>Estado efectivo</strong> aplicando la prioridad <strong>Bloqueado-admin &gt; No-disponible-región &gt; Programado &gt; Publicado</strong>, el <strong>detalle por región</strong> y, si está <strong>Programado</strong>, la <strong>fecha/hora</strong>.</p>
+</li>
+<li>
+<p>CA 4: Apariciones</p>
+</li>
+<li>Dado la pestaña <strong>Apariciones</strong></li>
+<li>
+<p>Entonces:</p>
+<ul>
+<li><strong>Canción</strong> → veo las <strong>Colecciones</strong> (Álbum/EP/Single/Playlist pública) que la incluyen, con <strong>Tipo</strong>, <strong>Título</strong>, <strong>Posición</strong> y <strong>Owner</strong> (si es Playlist). <strong>Clic</strong> en fila → <strong>Detalle de la Colección</strong>.</li>
+<li><strong>Colección</strong> → veo las <strong>Playlists</strong> que contienen <strong>canciones</strong> de esa Colección, con <strong>Título</strong>, <strong>Owner</strong> y <strong>Cantidad incluida</strong> (p. ej., “X de N”). <strong>Clic</strong> en fila → <strong>Detalle de la Playlist</strong>.</li>
+</ul>
+</li>
+<li>
+<p>CA 5: Auditoría</p>
+</li>
+<li>Dado la pestaña <strong>Auditoría</strong></li>
+<li>Entonces solo las canciones tienen auditoría y se listan solo los <strong>últimos cambios de Bloqueado-admin</strong> (bloqueo/desbloqueo) y <strong>cambios de disponibilidad por región</strong> (altas/bajas que deriven en <strong>No-disponible-región</strong>), con <strong>usuario</strong>, <strong>timestamp</strong>, <strong>evento</strong> y <strong>alcance/región</strong>.</li>
+</ul>
+<h3 id="disponibilidad-por-region-y-ventana">Disponibilidad por región y ventana<a class="headerlink" href="#disponibilidad-por-region-y-ventana" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 5 | Pack: BO8 — Backoffice Contenido+Moderación -->
+
+<p><strong>Descripción</strong>: Como <strong>administrador</strong>, quiero <strong>configurar territorios y vigencias</strong> para controlar <strong>dónde</strong> y <strong>cuándo</strong> está disponible un contenido.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Crear/editar política</li>
+<li>Dado un contenido en el backoffice</li>
+<li>Cuando defino <strong>territorios</strong> (allow/deny, con <strong>Global</strong> por defecto) y <strong>vigencia</strong> (<strong>fecha/hora desde</strong> y/o <strong>hasta</strong>, opcional)</li>
+<li>
+<p>Entonces la <strong>política se guarda</strong> y queda asociada al contenido.</p>
+</li>
+<li>
+<p>CA 2: Efectos y prioridad</p>
+</li>
+<li>Dado un contenido con política guardada</li>
+<li>Cuando llega la <strong>fecha/hora de vigencia</strong></li>
+<li>Entonces el estado pasa a <strong>Publicado</strong> en las <strong>regiones permitidas</strong> y a <strong>No-disponible-región</strong> en el resto.</li>
+<li>Y si existe <strong>Bloqueado-admin</strong>, <strong>prevalece</strong> (no reproducible) hasta ser levantado.</li>
+<li>
+<p>Y el <strong>estado efectivo</strong> respeta siempre la prioridad: <strong>Bloqueado-admin &gt; No-disponible-región &gt; Programado &gt; Publicado</strong>.</p>
+</li>
+<li>
+<p>CA 3: Auditoría</p>
+</li>
+<li>Dado que creo o edito una política</li>
+<li>Cuando guardo</li>
+<li>Entonces se registra en <strong>Auditoría</strong>: <strong>usuario</strong>, <strong>timestamp</strong>, <strong>cambios</strong> (territorios y/o vigencias) y <strong>alcance/región</strong>.</li>
+</ul>
+<h3 id="bloqueo-y-desbloqueo-con-alcance">Bloqueo y desbloqueo con alcance<a class="headerlink" href="#bloqueo-y-desbloqueo-con-alcance" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 3 | Pack: BO8 — Backoffice Contenido+Moderación -->
+
+<p><strong>Descripción</strong>: Como administrador, quiero bloquear o desbloquear contenido definiendo el alcance con prioridad sobre otras políticas.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Bloqueo — Alcance y motivo</li>
+<li>Dado que voy a bloquear un ítem</li>
+<li>Cuando confirmo</li>
+<li>
+<p>Entonces elijo <strong>alcance</strong> (global/regiones) y <strong>reason code</strong>.</p>
+</li>
+<li>
+<p>CA 2: Efecto inmediato (reflejo en producto)</p>
+</li>
+<li>Dado que confirmo un <strong>Bloqueado-admin</strong></li>
+<li>
+<p>Entonces el ítem:</p>
+<ul>
+<li>En <strong>Popular / Popular releases / Appears On / Búsqueda / Explorar</strong>: <strong>no se muestra</strong> (sale de rankings y listados).</li>
+<li>En <strong>Colecciones</strong>: <strong>se mantiene visible</strong> pero con <strong>acciones deshabilitadas</strong> e <strong>indicador</strong>.</li>
+</ul>
+</li>
+<li>
+<p>CA 3: Desbloqueo</p>
+</li>
+<li>Dado un ítem <strong>bloqueado-admin</strong></li>
+<li>Cuando confirmo <strong>Desbloquear</strong></li>
+<li>
+<p>Entonces se <strong>revierte</strong> el override y aplica la <strong>disponibilidad</strong> vigente (publicado/programado o no-disponible-región).</p>
+</li>
+<li>
+<p>CA 4: Auditoría</p>
+</li>
+<li>Dado la acción de bloqueo/desbloqueo</li>
+<li>Entonces queda <strong>usuario, timestamp, alcance y motivo</strong> en el historial.</li>
+</ul>
+<h3 id="transiciones-y-estado-efectivo-del-catalogo">Transiciones y estado efectivo del catálogo<a class="headerlink" href="#transiciones-y-estado-efectivo-del-catalogo" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>administrador</strong>, quiero reglas simples de <strong>estados, transiciones y prioridad</strong> para reflejar la disponibilidad real.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Estados</li>
+<li>Dado el modelo del catálogo</li>
+<li>Cuando consulto estados posibles</li>
+<li>
+<p>Entonces existen <strong>solo</strong>: <strong>Programado</strong>, <strong>Publicado</strong>, <strong>No-disponible-región</strong>, <strong>Bloqueado-admin</strong>.</p>
+</li>
+<li>
+<p>CA 2: Transiciones</p>
+</li>
+<li>Dado un lanzamiento</li>
+<li>Cuando ocurren eventos de disponibilidad</li>
+<li>
+<p>Entonces se permiten:</p>
+<ul>
+<li><strong>Programado → Publicado</strong> (automático al llegar la fecha/hora).</li>
+<li><strong>Publicado ↔ No-disponible-región</strong> (según territorios).</li>
+<li><strong>Publicado/Programado ↔ Bloqueado-admin</strong> (aplicar/quitar bloqueo).</li>
+<li><strong>Publicación directa por artistas</strong>: <strong>Publicar ahora</strong> o <strong>Programar</strong> sin revisión.</li>
+</ul>
+</li>
+<li>
+<p>CA 3: Prioridad y consumo</p>
+</li>
+<li>Dado políticas/estados solapados</li>
+<li>Cuando se calcula el <strong>estado efectivo</strong></li>
+<li>
+<p>Entonces la prioridad es <strong>Bloqueado-admin &gt; No-disponible-región &gt; Programado &gt; Publicado</strong>, y las superficies <strong>solo consumen el estado efectivo</strong> (mostrar/ocultar o <strong>deshabilitar</strong> acciones según corresponda).</p>
+</li>
+<li>
+<p>CA 4: Auditoría</p>
+</li>
+<li>Dado una transición aplicada</li>
+<li>Cuando se confirma</li>
+<li>Entonces se registra <strong>usuario</strong>, <strong>timestamp</strong>, <strong>estado previo→nuevo</strong> y <strong>reason code/alcance</strong>.</li>
+</ul>
+<h2 id="epica-explorar">Épica: Explorar<a class="headerlink" href="#epica-explorar" title="Permanent link">&para;</a></h2>
+<h3 id="home">Home<a class="headerlink" href="#home" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatorio -->
+
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero una página de <strong>Explorar</strong> para <strong>empezar a escuchar rápido</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Estructura y estilo general</li>
+<li>Dado que ingreso a <strong>Explorar</strong></li>
+<li>
+<p>Entonces veo las secciones en este orden: <strong>Tus atajos → New release from {Artist} → Recently played → Discover more from {Artist}</strong>, con títulos.</p>
+</li>
+<li>
+<p>CA 2: “Tus atajos”</p>
+</li>
+<li>Dado que se presenta la sección <strong>Tus atajos</strong></li>
+<li>
+<p>Entonces muestra <strong>hasta 8 ítems</strong>: la tarjeta fija <strong>Liked Songs</strong> y <strong>hasta 7</strong> tarjetas de <strong>playlists, álbumes, artistas</strong> que más escucho; cada tarjeta muestra <strong>portada y título</strong>.</p>
+</li>
+<li>
+<p>CA 3: “New release from {Artist}"</p>
+</li>
+<li>Dado que sigo artistas con lanzamientos vigentes</li>
+<li>Cuando existe al menos un lanzamiento</li>
+<li>
+<p>Entonces aparece una seccion con <strong>cover</strong>, <strong>nombre del álbum/single/EP</strong> y acciones <strong>Play (▶︎)</strong> y <strong>Guardar (+)</strong>; al tocar <strong>imagen o título</strong> voy al detalle.</p>
+</li>
+<li>
+<p>CA 4: “Recently played”</p>
+</li>
+<li>Dado que tengo historial de reproducción</li>
+<li>Cuando se presenta la sección</li>
+<li>
+<p>Entonces veo un carrusel/grilla con ítems <strong>ordenados por recencia de escucha</strong>; cada tarjeta navega a su <strong>detalle</strong>.</p>
+</li>
+<li>
+<p>CA 5: “Discover more from {Artist}” (opcional)</p>
+</li>
+<li>Dado que sigo al menos un artista</li>
+<li>Cuando carga esta sección</li>
+<li>
+<p>Entonces se elige <strong>aleatoriamente un artista seguido</strong> y se muestran tarjetas de <strong>playlists o álbumes</strong> relacionados, <strong>oficiales o de la comunidad (públicos)</strong>.</p>
+</li>
+<li>
+<p>CA 6: “Made for you” (opcional)</p>
+</li>
+<li>Dado que se muestra la sección <strong>New release from {Artist}</strong></li>
+<li>Entonces aparece <strong>inmediatamente debajo</strong> una sección <strong>Made for you</strong> con <strong>3 a 6</strong> tarjetas (p. ej., <em>Discover Weekly</em>, <em>Daily Mix</em>, <em>Because you listened to…</em>, <em>Mood Mix</em>);.</li>
+</ul>
+<h3 id="busqueda-unificada-por-tipo-de-contenido">Búsqueda unificada por tipo de contenido<a class="headerlink" href="#busqueda-unificada-por-tipo-de-contenido" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como usuario, quiero buscar canciones, álbumes, artistas, playlists desde un único buscador para encontrar rápidamente lo que quiero escuchar.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Pestañas por tipo</li>
+<li>Dado que abro el buscador</li>
+<li>Cuando ingreso un término</li>
+<li>
+<p>Entonces veo pestañas <strong>Todo, Canciones, Álbumes, Artistas, Playlists, Perfiles, Géneros &amp; Moods</strong> y la pestaña <strong>Géneros &amp; Moods</strong>.</p>
+</li>
+<li>
+<p>CA 2: Filtro por tipo</p>
+</li>
+<li>Dado que quiero acotar la búsqueda</li>
+<li>Cuando selecciono un tipo de contenido</li>
+<li>
+<p>Entonces los resultados se filtran dejando <strong>solo</strong> ese tipo activo.</p>
+</li>
+<li>
+<p>CA 3: “Top result”</p>
+</li>
+<li>Dado una consulta con <strong>alta coincidencia</strong></li>
+<li>Cuando se muestran resultados</li>
+<li>
+<p>Entonces aparece un bloque <strong>encabezado “Top result”</strong> (tipo variable: canción/álbum/artista/playlist), si no hay coincidencia fuerte, <strong>no se muestra</strong>. </p>
+</li>
+<li>
+<p>CA 4: Campos visibles en resultados</p>
+</li>
+<li>Dado que se muestran resultados</li>
+<li>Cuando corresponda por tipo</li>
+<li>
+<p>Entonces cada ítem exhibe <strong>nombre, imagen de portada, tipo</strong> y <strong>duración</strong> (si aplica).</p>
+</li>
+<li>
+<p>CA 5: Orden por defecto</p>
+</li>
+<li>Dado que el catálogo provee el <strong>orden por relevancia + popularidad recientes</strong></li>
+<li>Cuando se listan los resultados</li>
+<li>Entonces la vista <strong>solo consume</strong> ese orden.</li>
+</ul>
+<h3 id="navegacion-a-vistas-de-detalle">Navegación a vistas de detalle<a class="headerlink" href="#navegacion-a-vistas-de-detalle" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como oyente, quiero que al tocar un resultado en Explorar o Búsqueda se abra la ficha correcta con una interfaz consistente —ficha unificada de Colección (Álbum/EP/Single/Playlist)— para ver datos clave, la lista de canciones y poder reproducir o guardar rápidamente.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Acceso desde tarjetas/resultados</li>
+<li>Dado un ítem en <strong>Explorar</strong> o <strong>Búsqueda</strong></li>
+<li>Cuando toco <strong>imagen</strong> o <strong>título</strong></li>
+<li>
+<p>Entonces navego a la <strong>vista de detalle</strong> del <strong>tipo correcto</strong> (Álbum/EP/Single/Playlist)</p>
+</li>
+<li>
+<p>CA 2: Ficha unificada</p>
+</li>
+<li>Dado que abro una Colección</li>
+<li>
+<p>Entonces veo:</p>
+<ul>
+<li><strong>Header</strong>: cover, <strong>título</strong>, <strong>subtítulo</strong> (artista u <strong>owner/privacidad</strong>), <strong>chip de tipo</strong> y <strong>año</strong> (si aplica).</li>
+<li><strong>Acciones</strong>: <strong>Play</strong>, <strong>Shuffle</strong>, <strong>Guardar (+)</strong> y <strong>Compartir</strong> (sí aplica).</li>
+<li><strong>Lista de canciones</strong>: <strong>#</strong>, <strong>título</strong>, <strong>artista(s)</strong> (si corresponde) y <strong>badges</strong> (ej. video) (si aplica).</li>
+<li>Nota: <strong>Single</strong> = Colección de <strong>1 canción</strong>; en <strong>Playlist</strong> el subtítulo muestra <strong>owner/privacidad</strong>.</li>
+</ul>
+</li>
+<li>
+<p>CA 3: Estados y disponibilidad</p>
+</li>
+<li>Dado que se muestran la lista de canciones</li>
+<li>Entonces se muestran y respetan <strong>Bloqueado-admin / No-disponible-región / Publicado</strong> (con <strong>indicador</strong> y <strong>acciones deshabilitadas</strong> cuando corresponda).</li>
+<li>
+<p><strong>Programado</strong> solo para <strong>Álbum/EP/Single</strong>: <strong>fecha/estado</strong>, <strong>Pre-save</strong> en Biblioteca (si aplica) y <strong>canciones anticipadas</strong> sí reproducibles.</p>
+</li>
+<li>
+<p>CA 4: Reproducción y cola</p>
+</li>
+<li>Dado la ficha de una <strong>Colección</strong></li>
+<li>Cuando pulso <strong>Play</strong></li>
+<li>Entonces el <strong>contexto</strong> pasa a esa <strong>Colección</strong> y la <strong>cola</strong> se define por el <strong>orden mostrado</strong> (o <strong>Shuffle</strong> si está activo).</li>
+<li>Cuando toco en una <strong>canción</strong> de la lista</li>
+<li>
+<p>Entonces <strong>si</strong> el contexto activo ya es esa <strong>Colección</strong>, se <strong>salta</strong> a esa canción <strong>dentro de la misma cola</strong>; <strong>si no</strong>, el <strong>contexto</strong> pasa a esa <strong>Colección</strong> y la <strong>cola</strong> se define <strong>desde esa canción</strong> según el <strong>orden mostrado</strong> (o <strong>Shuffle</strong> si está activo).</p>
+</li>
+<li>
+<p>CA 5: Menú contextual “⋮” (por canción)</p>
+</li>
+<li>Dado que abro <strong>⋮</strong> en una canción</li>
+<li>Entonces veo: <strong>Compartir</strong> (de forma externa), <strong>Me gusta</strong>, <strong>Añadir a playlist</strong> (picker), <strong>Añadir a la cola</strong> (encola tras la actual; <strong>no</strong> cambia el contexto), <strong>Ir al álbum</strong>, <strong>Ir al artista</strong>, <strong>Radio de la canción</strong> (sí aplica).</li>
+</ul>
+<h3 id="made-for-you">Made For You<a class="headerlink" href="#made-for-you" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 8 | Pack: P2 -->
+
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero un bloque <strong>Made For You</strong> en <strong>Explorar</strong> con playlists generadas por <strong>Melodia</strong> (<em>Discover Weekly</em> y <em>Daily Mix</em>) para <strong>empezar a escuchar rápido</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Presencia y cantidad</li>
+<li>Dado que se carga <strong>Explorar</strong></li>
+<li>Cuando existe señal mínima (historial o favoritos)</li>
+<li>
+<p>Entonces veo el bloque <strong>Made For You</strong> con <strong>3–6 tarjetas</strong> compuestas por <strong>Discover Weekly</strong> (si existe) y <strong>2–6 Daily Mix</strong>.</p>
+</li>
+<li>
+<p>CA 2: Presentación y navegación</p>
+</li>
+<li>Dado que estoy en la sección <strong>Made For You</strong></li>
+<li>Cuando se muestran las playlists generadas por <strong>Melodia</strong></li>
+<li>
+<p>Entonces cada item exhibe <strong>portada</strong>, <strong>título</strong>, <strong>subtítulo con artistas representativos</strong> y un <strong>badge “Made for {usuario}”</strong>; al tocar <strong>imagen o título</strong> abro el <strong>detalle de la playlist</strong>. El contenido se <strong>actualiza periodicamente</strong> según <strong>afinidad del oyente</strong> y <strong>popularidad reciente</strong>.</p>
+</li>
+<li>
+<p>CA 3: Discover Weekly</p>
+</li>
+<li>Dado que el set incluye <strong>Discover Weekly</strong></li>
+<li>Cuando llega su <strong>actualización semanal</strong></li>
+<li>Entonces existe <strong>una única</strong> playlist <strong>por usuario</strong> que reemplaza a la anterior</li>
+<li>
+<p>Y prioriza <strong>canciones no reproducidos</strong> previamente por ese usuario.</p>
+</li>
+<li>
+<p>CA 4: Daily Mix (clúster de gusto)</p>
+</li>
+<li>Dado que el set incluye <strong>Daily Mix</strong></li>
+<li>Cuando se generan los mixes</li>
+<li>Entonces aparecen <strong>2–6</strong> listas <strong>numeradas</strong> (<strong>01, 02, …</strong>) y <strong>nombradas</strong> por su <strong>clúster de afinidad</strong> (p. ej., “Daily Mix 01”).</li>
+<li>Y cada subtítulo lista <strong>2–4 artistas</strong> representativos.</li>
+<li>Y cada mix se <strong>refresca al menos 1 vez al día</strong>.</li>
+<li>Y mantiene <strong>alta familiaridad</strong> (predominio de artistas/canciones reproducidos) con <strong>pequeñas adiciones</strong>, (p. ej., 10–20% de canciones nuevos de un artista que sigo).</li>
+</ul>
+<hr />
+<h2 id="epica-reproduccion">Épica: Reproducción<a class="headerlink" href="#epica-reproduccion" title="Permanent link">&para;</a></h2>
+<h3 id="reproduccion-y-controles-basicos">Reproducción y Controles Básicos<a class="headerlink" href="#reproduccion-y-controles-basicos" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero <strong>controlar la reproducción de música con acciones básicas como play, pausa y siguiente</strong> para <strong>gestionar mi experiencia de escucha de forma intuitiva</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Reproducción de canción individual</li>
+<li>Dado que estoy navegando por el catálogo de música</li>
+<li>Cuando selecciono una canción para reproducir</li>
+<li>
+<p>Entonces la canción comienza a sonar y se muestran los controles de reproducción básicos.</p>
+</li>
+<li>
+<p>CA 2: Navegación en la cola de reproducción</p>
+</li>
+<li>Dado que estoy escuchando una canción y tengo una cola de reproducción activa</li>
+<li>Cuando utilizo los controles 'siguiente' o 'anterior'</li>
+<li>
+<p>Entonces la reproducción salta a la siguiente o anterior canción en la cola respectivamente.</p>
+</li>
+<li>
+<p>CA 3: Pausa y reanudación de reproducción</p>
+</li>
+<li>Dado que una canción se está reproduciendo</li>
+<li>Cuando presiono el botón de pausa</li>
+<li>
+<p>Entonces la reproducción se detiene y puedo reanudarla desde el mismo punto (si es on-demand).</p>
+</li>
+<li>
+<p>CA 4: Modo aleatorio (Shuffle)</p>
+</li>
+<li>Dado que tengo una lista de canciones (álbum, playlist) para reproducir</li>
+<li>Cuando activo el modo aleatorio</li>
+<li>Entonces las canciones se reproducen en un orden no secuencial.</li>
+</ul>
+<h3 id="controles-avanzados-del-player">Controles avanzados del Player<a class="headerlink" href="#controles-avanzados-del-player" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero <strong>usar controles avanzados como la barra de progreso (seek) y el modo de repetición</strong> para <strong>gestionar mi reproducción con mayor precisión</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Seek/Scrub</li>
+<li>Dado que una canción se está reproduciendo</li>
+<li>Cuando arrastro el control de tiempo a un timestamp</li>
+<li>
+<p>Entonces la reproducción continúa desde ese punto.</p>
+</li>
+<li>
+<p>CA 2: Repetición</p>
+</li>
+<li>Dado que estoy escuchando música</li>
+<li>Cuando alterno el control de repetición</li>
+<li>Entonces el modo cambia entre: sin repetición, repetir uno, repetir todos.</li>
+</ul>
+<h3 id="gestion-de-cola">Gestión de cola<a class="headerlink" href="#gestion-de-cola" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero <strong>ver y gestionar mi cola de reproducción</strong> para <strong>controlar el orden de lo que suena sin interrumpir la canción actual</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Ver cola actual</li>
+<li>Dado que abro la vista de cola</li>
+<li>Cuando se carga</li>
+<li>
+<p>Entonces veo el <strong>canción actual</strong> y el <strong>listado de siguientes</strong>.</p>
+</li>
+<li>
+<p>CA 2: Reordenar y eliminar</p>
+</li>
+<li>Dado que veo la cola</li>
+<li>Cuando arrastro un ítem o toco <strong>Eliminar</strong></li>
+<li>
+<p>Entonces el orden se actualiza al instante y el ítem eliminado no será reproducido.</p>
+</li>
+<li>
+<p>CA 3: Limpiar cola (fallback definido)</p>
+</li>
+<li>Dado que quiero vaciar la cola</li>
+<li>Cuando toco <strong>Limpiar</strong> y confirmo</li>
+<li>
+<p>Entonces se vacían los siguientes; si no quedan siguientes:</p>
+<ul>
+<li>Si <strong>Vibras</strong> (Reproducción Continua - autoplay / radio) está activo, continúa con sugerencias.</li>
+<li>Si no, el reproductor <strong>se detiene</strong> al terminar el canción actual.</li>
+</ul>
+</li>
+<li>
+<p>CA 4: Reproducir siguiente</p>
+</li>
+<li>Dado que estoy escuchando</li>
+<li>Cuando toco <strong>Siguiente</strong></li>
+<li>Entonces salta al próximo de la cola; si no hay próximo, aplica el fallback del criterio anterior.</li>
+</ul>
+<h3 id="marcado-de-liked-songs-desde-el-player">Marcado de Liked Songs desde el Player<a class="headerlink" href="#marcado-de-liked-songs-desde-el-player" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero <strong>marcar o desmarcar una canción como favorita directamente desde el reproductor</strong> para <strong>actualizar mi biblioteca personal de forma rápida y contextual</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Lectura del estado inicial</li>
+<li>Dado que estoy reproduciendo una canción en el Player</li>
+<li>Cuando carga la vista</li>
+<li>
+<p>Entonces el icono de 'Me Gusta' refleja si la canción existe o no en Biblioteca &gt; Liked Songs.</p>
+</li>
+<li>
+<p>CA 2: Toggle que persiste en Biblioteca</p>
+</li>
+<li>Dado que veo el icono de 'Me Gusta' en el Player</li>
+<li>Cuando pulso para marcar o desmarcar</li>
+<li>
+<p>Entonces se actualiza el icono inmediatamente y la operación se persiste en Liked Songs (añadir o eliminar de Liked Songs).</p>
+</li>
+<li>
+<p>CA 3: Visualización en Biblioteca</p>
+</li>
+<li>Dado que acabo de marcar/desmarcar en el Player</li>
+<li>Cuando navego a la sección Biblioteca &gt; Liked Songs</li>
+<li>
+<p>Entonces veo el resultado de la operación reflejado sin acciones adicionales del usuario.</p>
+</li>
+<li>
+<p>CA 4: Actualización optimista</p>
+</li>
+<li>Dado que pulso el icono de 'Me Gusta'</li>
+<li>Cuando la operación de añadir o eliminar se está procesando</li>
+<li>Entonces el icono cambia inmediatamente para reflejar la acción del usuario, incluso si la operación de backend aún no ha finalizado.</li>
+<li>Si la operación falla, el icono vuelve a su estado original y se muestra un breve error.</li>
+</ul>
+<h3 id="videos-musicales-asociados">Videos Musicales Asociados<a class="headerlink" href="#videos-musicales-asociados" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 3 | Pack: P8 — Player Avanzado -->
+
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero <strong>acceder a videos musicales asociados a una canción</strong> para <strong>enriquecer mi experiencia de escucha con contenido visual</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Acceso al Video Musical</li>
+<li>Dado el usuario está reproduciendo una canción que tiene un video asociado</li>
+<li>Cuando selecciona un icono o botón visible en la interfaz de reproducción</li>
+<li>
+<p>Entonces se abre una vista o reproductor de video integrado que muestra el video musical oficial.</p>
+</li>
+<li>
+<p>CA 2: Reproducción Sincronizada</p>
+</li>
+<li>Dado el video musical está en reproducción</li>
+<li>Cuando la canción se reproduce en segundo plano o se pausa</li>
+<li>
+<p>Entonces la reproducción del video se sincroniza con el estado de la canción de audio, o se pausa automáticamente si la canción se detiene.</p>
+</li>
+<li>
+<p>CA 3: Navegación Fluida entre Audio y Video</p>
+</li>
+<li>Dado el usuario está viendo el video musical</li>
+<li>Cuando cierra la vista del video</li>
+<li>
+<p>Entonces regresa a la interfaz de reproducción de audio sin perder el progreso ni el estado de la canción.</p>
+</li>
+<li>
+<p>CA 4: Indicador de Video Disponible</p>
+</li>
+<li>Dado el usuario navega por canciones o playlists</li>
+<li>Cuando visualiza la lista de canciones</li>
+<li>Entonces se muestra un indicador visual claro (ej. un icono) junto a las canciones que tienen un video musical disponible.</li>
+</ul>
+<h3 id="reproduccion-on-demand">Reproducción On Demand<a class="headerlink" href="#reproduccion-on-demand" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 5 | Pack: P8 — Player Avanzado -->
+
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero <strong>reanudar mi sesión de escucha entre diferentes dispositivos sin interrupciones</strong> para <strong>tener una experiencia de reproducción continua y fluida</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Guardar estado al salir</li>
+<li>Dado que estoy escuchando música</li>
+<li>Cuando cierro la app o pierdo conexión</li>
+<li>
+<p>Entonces se guarda automáticamente el punto exacto de la canción y la cola activa.</p>
+</li>
+<li>
+<p>CA 2: Reanudar al abrir</p>
+</li>
+<li>Dado que tenía música reproduciéndose antes de cerrar la app</li>
+<li>Cuando la vuelvo a abrir y estoy logueado con la misma cuenta</li>
+<li>
+<p>Entonces me ofrece continuar desde donde lo dejé (misma canción y posición) o empezar de nuevo.</p>
+</li>
+<li>
+<p>CA 3: Persistencia multi-sesión</p>
+</li>
+<li>Dado que cierro sesión o cambio de dispositivo móvil (pero con misma cuenta)</li>
+<li>Cuando inicio sesión en otro móvil</li>
+<li>
+<p>Entonces puedo reanudar la última sesión de escucha desde el punto guardado.</p>
+</li>
+<li>
+<p>CA 4: Sincronización de cola</p>
+</li>
+<li>Dado que la reproducción se reanuda</li>
+<li>Cuando continúa</li>
+<li>
+<p>Entonces también recupera la cola de canciones que seguían pendientes antes de la pausa.</p>
+</li>
+<li>
+<p>CA 5: Fallback</p>
+</li>
+<li>Dado que no se pudo recuperar el estado anterior (por ejemplo, error en sincronización)</li>
+<li>Cuando abro la app</li>
+<li>No se muestra un mensaje de error, simplemente inicio en estado fresco (sin reproducción activa).</li>
+</ul>
+<h3 id="reproduccion-continua-autoplay-ia">Reproducción Continua (autoplay) [IA]<a class="headerlink" href="#reproduccion-continua-autoplay-ia" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 3 | Pack: V9 — Vibras Core -->
+
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero <strong>que al terminar una canción la música continúe automáticamente con canciones afines</strong> para <strong>no interrumpir mi experiencia de escucha cuando no he definido una cola</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Solicitud automática de siguiente</li>
+<li>Dado que termina la canción y no hay siguientes en la cola</li>
+<li>Cuando ocurre</li>
+<li>
+<p>Entonces el Player solicita a Catálogo/Ranking un siguiente canción afín usando como semilla el contexto de origen (último canción, playlist temática o radio por artista).</p>
+</li>
+<li>
+<p>CA 2: Indicador visible</p>
+</li>
+<li>Dado que suena un canción por Reproducción Continua (autoplay)</li>
+<li>Cuando se muestra el Player</li>
+<li>
+<p>Entonces se indica claramente que es una sugerencia automática.</p>
+</li>
+<li>
+<p>CA 3: Control del usuario</p>
+</li>
+<li>Dado que suena un canción por Reproducción Continua (autoplay)</li>
+<li>Cuando toco Siguiente o Desactivar autoplay</li>
+<li>Entonces salta a otra sugerencia o se desactiva la continuidad automática.</li>
+<li>
+<p>El estado del autoplay se guarda como preferencia del usuario.</p>
+</li>
+<li>
+<p>CA 4: Coherencia con el origen</p>
+</li>
+<li>Dado que la Reproducción Continua (autoplay) viene de una playlist temática o radio por artista</li>
+<li>Cuando continúe</li>
+<li>Entonces mantiene la coherencia con esa temática o artista base durante el primer tramo de reproducción.</li>
+</ul>
+<hr />
+<h2 id="epica-biblioteca">Épica: Biblioteca<a class="headerlink" href="#epica-biblioteca" title="Permanent link">&para;</a></h2>
+<h3 id="creacion-y-gestion-de-playlists">Creación y Gestión de Playlists<a class="headerlink" href="#creacion-y-gestion-de-playlists" title="Permanent link">&para;</a></h3>
+<p><strong>Descripción</strong>: Como oyente o Artista, quiero crear y gestionar mis propias playlists para organizar mi música.</p>
+<!-- Status: Obligatoria -->
+
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Creación de Nueva Playlist</li>
+<li>Dado un usuario en su biblioteca musical</li>
+<li>Cuando selecciona la opción 'Crear Playlist'</li>
+<li>
+<p>Entonces puede darle un nombre y una portada a su nueva playlist.</p>
+</li>
+<li>
+<p>CA 2: Añadir Canciones a Playlist</p>
+</li>
+<li>Dado un usuario está reproduciendo una canción o navegando</li>
+<li>Cuando selecciona 'Añadir a Playlist' para una canción</li>
+<li>
+<p>Entonces puede elegir una playlist existente o la playlist recién creada para añadirla.</p>
+</li>
+<li>
+<p>CA 3: Visualización de Playlists</p>
+</li>
+<li>Dado un usuario accede a su biblioteca</li>
+<li>Cuando selecciona la sección de 'Playlists'</li>
+<li>
+<p>Entonces se muestra un listado de todas sus playlists creadas, con su título y número de canciones.</p>
+</li>
+<li>
+<p>CA 4: Eliminar Canciones de Playlist</p>
+</li>
+<li>Dado un usuario está viendo el contenido de una playlist</li>
+<li>Cuando selecciona una canción y elige 'Eliminar de Playlist'</li>
+<li>
+<p>Entonces la canción se remueve de esa playlist específica.</p>
+</li>
+<li>
+<p>CA 5: Privacidad de playlist</p>
+</li>
+<li>Dado que edito una playlist</li>
+<li>Cuando cambio su estado a <strong>Pública/Privada</strong></li>
+<li>
+<p>Entonces el enlace compartible sólo funciona si es <strong>Pública</strong>; si es <strong>Privada</strong>, el enlace no funciona.</p>
+</li>
+<li>
+<p>CA 6: Ficha de playlist</p>
+</li>
+<li>Dado que abro una playlist</li>
+<li>Cuando se muestra su detalle</li>
+<li>Entonces veo portada, owner y lista de canciones con acciones <strong>Reproducir</strong> y <strong>Guardar</strong>.</li>
+</ul>
+<h3 id="reordenamiento-de-contenido-en-playlists">Reordenamiento de Contenido en Playlists<a class="headerlink" href="#reordenamiento-de-contenido-en-playlists" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como usuario, quiero <strong>reordenar y gestionar el contenido de mis playlists</strong> para <strong>definir el orden de reproducción y organizar mejor mis listas</strong> sin interrumpir lo que suena.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Activar Modo Edición de Playlist</li>
+<li>Dado un usuario está visualizando una de sus playlists</li>
+<li>Cuando selecciona la opción 'Editar Playlist'</li>
+<li>
+<p>Entonces se activa el modo de edición que permite reordenar o eliminar canciones.</p>
+</li>
+<li>
+<p>CA 2: Reordenar Canciones mediante Arrastrar y Soltar</p>
+</li>
+<li>Dado el modo de edición de playlist está activo</li>
+<li>Cuando el usuario arrastra y suelta una canción a una nueva posición</li>
+<li>
+<p>Entonces la posición de la canción se actualiza dentro de la playlist.</p>
+</li>
+<li>
+<p>CA 3: Guardar Cambios de Orden</p>
+</li>
+<li>Dado el usuario ha reordenado canciones en una playlist</li>
+<li>Cuando selecciona 'Guardar Cambios'</li>
+<li>
+<p>Entonces el nuevo orden de las canciones se persiste y se mantiene para futuras reproducciones.</p>
+</li>
+<li>
+<p>CA 4: Cola futura y reordenamiento</p>
+</li>
+<li>Dado que esa playlist está sonando</li>
+<li>Cuando guardo el nuevo orden</li>
+<li>Entonces el contexto actual <strong>no cambia</strong> (siguientes siguen igual).</li>
+</ul>
+<h3 id="historial-de-reproduccion">Historial de Reproducción<a class="headerlink" href="#historial-de-reproduccion" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>
+Como oyente, quiero acceder a mi historial de reproducción con información enriquecida para poder redescubrir canciones que escuché recientemente, continuar donde las dejé y explorar de forma más fácil mi actividad musical.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Acceso rápido al historial</li>
+<li>Dado que he reproducido varias canciones</li>
+<li>Cuando accedo a la sección "Historial" desde mi perfil</li>
+<li>
+<p>Entonces veo inmediatamente la lista de canciones reproducidas recientemente, con la más reciente en primer lugar.</p>
+</li>
+<li>
+<p>CA 2: Información enriquecida en cada entrada</p>
+</li>
+<li>Dado que estoy viendo el historial</li>
+<li>Cuando observo cada canción</li>
+<li>
+<p>Entonces cada entrada muestra título, artista, portada, nombre de la playlist o álbum (si aplica).</p>
+</li>
+<li>
+<p>CA 3: Filtros y búsqueda dentro del historial</p>
+</li>
+<li>Dado que tengo muchas canciones en mi historial</li>
+<li>Cuando uso el buscador o filtro</li>
+<li>
+<p>Entonces el historial se actualiza mostrando solo los resultados que cumplen con el filtro o la búsqueda.</p>
+</li>
+<li>
+<p>CA 4: Continuar reproducción desde historial</p>
+</li>
+<li>Dado que estoy viendo el historial</li>
+<li>Cuando selecciono una canción</li>
+<li>
+<p>Entonces la reproducción comienza desde el inicio de esa canción o, si estaba a medio escuchar y aún está en progreso, me ofrece continuar desde donde la dejé.</p>
+</li>
+<li>
+<p>CA 5: Limpiar historial / Pausar historial</p>
+</li>
+<li>Dado que quiero gestionar mi privacidad</li>
+<li>Cuando selecciono <strong>Limpiar historial</strong> o <strong>Pausar historial</strong></li>
+<li>Entonces se elimina el historial existente o se detiene indefinidamente la recolección hasta reactivar.</li>
+</ul>
+<h3 id="liked-songs">Liked Songs<a class="headerlink" href="#liked-songs" title="Permanent link">&para;</a></h3>
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero <strong>guardar canciones como favoritas</strong> para <strong>acceder rápidamente a ellas en el futuro</strong>.</p>
+<!-- Status: Obligatoria -->
+
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Añadir a Liked Songs</li>
+<li>Dado que el usuario pulsa <strong>Me Gusta</strong> (corazón) en una canción (desde cualquier vista o desde el Player)</li>
+<li>
+<p>Entonces la canción queda <strong>añadida a Liked Songs</strong> en su Biblioteca.</p>
+</li>
+<li>
+<p>CA 2: Quitar de Liked Songs</p>
+</li>
+<li>Dado que una canción ya está en Liked Songs</li>
+<li>Cuando el usuario vuelve a pulsar <strong>Me Gusta</strong></li>
+<li>
+<p>Entonces la canción se <strong>elimina de Liked Songs</strong>.</p>
+</li>
+<li>
+<p>CA 3: Acceso y visualización</p>
+</li>
+<li>Dado que el usuario abre <strong>Biblioteca &gt; Liked Songs</strong></li>
+<li>
+<p>Entonces ve el listado de sus canciones marcadas, <strong>ordenadas por agregado más reciente</strong> (si no hay canciones, se muestra estado vacío).</p>
+</li>
+<li>
+<p>CA 4: Reproducción desde Liked Songs</p>
+</li>
+<li>Dado que el usuario está en <strong>Liked Songs</strong></li>
+<li>Cuando hace click/tap en una canción</li>
+<li>Entonces la canción <strong>se reproduce ahora</strong> y el <strong>contexto</strong> pasa a ser <strong>Liked Songs</strong>; los “Siguientes” son el <strong>resto de Liked Songs</strong> según el orden actual o <strong>Shuffle</strong> si está activo.</li>
+</ul>
+<h3 id="creacion-asistida-de-mood-mixes-ia">Creación Asistida de 'Mood Mixes' (IA)<a class="headerlink" href="#creacion-asistida-de-mood-mixes-ia" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 5 | Pack: L10 — Biblioteca/IA -->
+
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Generación de Mood Mix Sugerido</li>
+<li>Dado un usuario explora la creación de una nueva playlist temática</li>
+<li>Cuando selecciona la opción de 'Crear Mood Mix'</li>
+<li>
+<p>Entonces se le presenta una selección de canciones sugeridas por el sistema, basadas en su historial y 'Me Gusta'.</p>
+</li>
+<li>
+<p>CA 2: Afinidad de Sugerencias</p>
+</li>
+<li>Dado el sistema genera sugerencias para un Mood Mix</li>
+<li>Cuando el usuario revisa las canciones sugeridas</li>
+<li>
+<p>Entonces las sugerencias deben tener una alta afinidad semántica o de estilo con las canciones que el usuario ha marcado como favoritas o ha escuchado repetidamente.</p>
+</li>
+<li>
+<p>CA 3: Añadir Sugerencias a Mix</p>
+</li>
+<li>Dado el usuario visualiza las canciones sugeridas</li>
+<li>Cuando selecciona añadir una o varias canciones sugeridas a su Mood Mix</li>
+<li>
+<p>Entonces las canciones se añaden correctamente a la playlist en creación.</p>
+</li>
+<li>
+<p>CA 4: Alternativa sin LLM</p>
+</li>
+<li>Dado un usuario intenta crear un Mood Mix</li>
+<li>Cuando el servicio de sugerencias no está disponible</li>
+<li>Entonces el usuario puede proceder a crear una playlist manualmente sin sugerencias.</li>
+</ul>
+<h2 id="epica-notificaciones">Épica: Notificaciones<a class="headerlink" href="#epica-notificaciones" title="Permanent link">&para;</a></h2>
+<h3 id="notificacion-por-nuevo-contenido-y-actividad-seguida">Notificación por nuevo contenido y actividad seguida<a class="headerlink" href="#notificacion-por-nuevo-contenido-y-actividad-seguida" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria -->
+
+<p><strong>Descripción</strong>: Como <strong>usuario</strong>, quiero <strong>recibir notificaciones sobre lanzamientos de artistas que sigo, actividad de perfiles que sigo</strong> para <strong>mantenerme al día con lo que me interesa</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Lanzamiento de artista seguido</li>
+<li>Dado un usuario sigue a un artista</li>
+<li>
+<p>Entonces recibe una notificación cuando el artista <strong>publica</strong> un álbum/single o cuando <strong>entra en vigencia</strong> un lanzamiento <strong>programado</strong> (respetando región), con acceso directo a la ficha del lanzamiento.</p>
+</li>
+<li>
+<p>CA 2: Actividad de perfiles seguidos</p>
+</li>
+<li>Dado un usuario sigue a otro usuario</li>
+<li>Entonces recibe una notificación cuando ese perfil <strong>publica una playlist pública</strong> o <strong>comparte</strong> una canción/playlist con él.</li>
+<li>
+<p>Opcionalmente, cuando <strong>recibe un nuevo seguidor</strong> o <strong>un “me gusta”</strong> en una playlist propia pública.</p>
+</li>
+<li>
+<p>CA 3: Configuración de notificaciones</p>
+</li>
+<li>Dado un usuario desea gestionar sus notificaciones</li>
+<li>
+<p>Entonces puede habilitar o deshabilitar <strong>tipos/categorías</strong> (Contenido, Social, Biblioteca) y fuentes (p. ej., artistas seguidos específicos).</p>
+</li>
+<li>
+<p>CA 4: Notificaciones por defecto</p>
+</li>
+<li>Dado el usuario omite la configuración de notificaciones</li>
+<li>Cuando completa el onboarding</li>
+<li>Entonces se activan por defecto las notificaciones <strong>esenciales</strong> (p. ej., lanzamientos de artistas seguidos y compartidos directos).</li>
+</ul>
+<h3 id="enrutamiento-al-hacer-clic-en-notificaciones-deep-link">Enrutamiento al hacer clic en notificaciones (Deep Link)<a class="headerlink" href="#enrutamiento-al-hacer-clic-en-notificaciones-deep-link" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 5 | Pack: N5 — Notifs Deep Links -->
+
+<p><strong>Descripción</strong>: Como <strong>usuario</strong>, quiero que <strong>al tocar una notificación</strong> se abra <strong>directamente la pantalla de destino correcta</strong> (lanzamiento, playlist o perfil), para <strong>actuar al instante sin tener que buscar</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Lanzamiento de artista seguido → Ficha de lanzamiento</li>
+<li>Dado que recibo una notificación por un <strong>álbum/single publicado</strong> o que <strong>entra en vigencia</strong> uno programado</li>
+<li>Cuando toco la notificación</li>
+<li>
+<p>Entonces navego a la <strong>ficha del lanzamiento</strong>; si está <strong>programado</strong> aún no vigente, veo estado y <strong>reproducción deshabilitada</strong>; si es <strong>no-disponible-región</strong>, veo <strong>indicador</strong> y acciones deshabilitadas.</p>
+</li>
+<li>
+<p>CA 2: Actividad de perfiles seguidos → Destino por tipo</p>
+</li>
+<li>Dado que sigo a un perfil y recibo una notificación de actividad</li>
+<li>Cuando toco la notificación</li>
+<li>
+<p>Entonces:</p>
+<ul>
+<li><strong>Nueva playlist pública</strong> → voy a la <strong>ficha de la playlist</strong>.</li>
+<li><strong>Compartido directo</strong> (canción/playlist) → voy al <strong>detalle del contenido compartido</strong>.</li>
+<li><strong>Nuevo seguidor</strong> → voy al <strong>perfil del seguidor</strong>.</li>
+<li><strong>“Me gusta” en mi playlist pública</strong> → voy a la <strong>ficha de mi playlist</strong> con foco en actividad.</li>
+</ul>
+</li>
+<li>
+<p>CA 3: Lectura y trazabilidad</p>
+</li>
+<li>Dado que ingreso al destino desde una notificación</li>
+<li>Cuando la pantalla carga</li>
+<li>
+<p>Entonces la notificación queda <strong>marcada como leída</strong> en el <strong>centro de notificaciones</strong> y se registra <strong>notification_id, tipo, canal y timestamp</strong> para métricas.</p>
+</li>
+<li>
+<p>CA 4: Contenido no disponible o retirado</p>
+</li>
+<li>Dado que el destino ya no existe o está retirado</li>
+<li>Cuando toco la notificación</li>
+<li>
+<p>Entonces veo una <strong>pantalla de fallback</strong> con mensaje claro y accesos a <strong>Explorar</strong> o <strong>perfil del artista</strong> según corresponda.</p>
+</li>
+<li>
+<p>CA 5: Volver con estado</p>
+</li>
+<li>Dado que navegué al destino desde una notificación</li>
+<li>Cuando regreso</li>
+<li>Entonces vuelvo al <strong>centro de notificaciones</strong> manteniendo <strong>posición y filtros</strong> previamente aplicados.</li>
+</ul>
+<hr />
+<h2 id="epica-metricas">Épica: Métricas<a class="headerlink" href="#epica-metricas" title="Permanent link">&para;</a></h2>
+<h3 id="metricas-de-canciones-y-albumes">Métricas de canciones y álbumes<a class="headerlink" href="#metricas-de-canciones-y-albumes" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria | Puntos: 3 | Pack: P10. Métricas & Analítica -->
+
+<p><strong>Descripción</strong>: Como <strong>administrador o analista</strong>, quiero <strong>visualizar métricas clave de canciones y álbumes</strong> para <strong>entender su rendimiento y tomar decisiones informadas</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Métricas de canciones</li>
+<li>Dado el usuario está viendo los detalles de una canción</li>
+<li>
+<p>Entonces debe poder ver métricas asociadas a esa canción, como número de reproducciones, 'me gusta' y veces compartida.</p>
+</li>
+<li>
+<p>CA 2: Métricas de álbumes</p>
+</li>
+<li>Dado el usuario está viendo los detalles de un álbum</li>
+<li>
+<p>Entonces debe poder ver métricas asociadas a ese álbum, como número total de reproducciones de sus canciones, número de 'me gusta' del álbum y veces compartido.</p>
+</li>
+<li>
+<p>CA 3: Actualización de métricas</p>
+</li>
+<li>Dado una canción o álbum es reproducido o interactuado</li>
+<li>
+<p>Entonces las métricas correspondientes deben actualizarse en tiempo real o con una frecuencia razonable.</p>
+</li>
+<li>
+<p>CA 4: Visualización de métricas</p>
+</li>
+<li>Dado el usuario accede a la sección de métricas</li>
+<li>Entonces las métricas deben presentarse de forma clara y comprensible, posiblemente con gráficos o resúmenes.</li>
+</ul>
+<h3 id="metricas-de-usuario">Métricas de usuario<a class="headerlink" href="#metricas-de-usuario" title="Permanent link">&para;</a></h3>
+<!-- Status: Obligatoria | Puntos: 5 | Pack: P10. Métricas & Analítica -->
+
+<p><strong>Descripción</strong>: Como <strong>administrador o analista</strong>, quiero <strong>ver métricas de uso, crecimiento y retención</strong> para <strong>evaluar la salud del producto y detectar oportunidades</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Visualización de métricas de usuario</li>
+<li>Dado como administrador, quiero ver un panel con las métricas clave de uso de la aplicación (usuarios activos, nuevos registros, retención)</li>
+<li>
+<p>Entonces el panel debe mostrar claramente estas métricas con gráficos actualizados en tiempo real y la posibilidad de filtrar por período de tiempo (diario, semanal, mensual).</p>
+</li>
+<li>
+<p>CA 2: Exportación de métricas</p>
+</li>
+<li>Dado como administrador, necesito poder exportar los datos de las métricas de usuario</li>
+<li>
+<p>Entonces debería existir una opción para exportar las métricas en formato CSV o Excel, permitiendo su análisis posterior.</p>
+</li>
+<li>
+<p>CA 3: Detalle de métricas</p>
+</li>
+<li>Dado como analista, quiero poder profundizar en las métricas de usuario para entender patrones</li>
+<li>Entonces al hacer clic en una métrica específica, debería poder ver un desglose más detallado, como la demografía de los usuarios o su actividad principal.</li>
+</ul>
+<hr />
+<h3 id="metricas-de-artistas">Métricas de artistas<a class="headerlink" href="#metricas-de-artistas" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 5 | Pack: P10. Métricas & Analítica -->
+
+<p><strong>Descripción</strong>:  <strong>administrador</strong>, quiero <strong>ver un panel con las métricas clave del artista</strong> para <strong>entender el desempeño del catálogo, los mercados donde crece y qué contenidos impulsan la escucha</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: KPIs principales</li>
+<li>Dado que abro el panel del artista</li>
+<li>
+<p>Entonces veo <strong>oyentes mensuales</strong> (valor mensual actualizado diariamente), <strong>seguidores</strong>, <strong>reproducciones del período</strong>, <strong>guardados</strong> y <strong>compartidos</strong>, con <strong>variación vs. período anterior</strong> (∆ y %).</p>
+</li>
+<li>
+<p>CA 2: Filtros por período y región</p>
+</li>
+<li>Dado el panel</li>
+<li>Cuando aplico filtros <strong>diario/semanal/mensual</strong> o <strong>rango custom</strong> y <strong>región/país</strong></li>
+<li>
+<p>Entonces todos los gráficos y tablas se <strong>actualizan</strong> al instante respetando esos filtros.</p>
+</li>
+<li>
+<p>CA 3: Desgloses navegables</p>
+</li>
+<li>Dado el panel filtrado</li>
+<li>Entonces veo:<ul>
+<li><strong>Top canciones del artista</strong> (por reproducciones y/o guardados).</li>
+<li><strong>Top mercados</strong> (país/región por reproducciones).</li>
+<li><strong>Top playlists</strong> que incluyen canciones del artista.</li>
+</ul>
+</li>
+<li>
+<p>Y <strong>al hacer clic</strong> en una canción/playlist/mercado, navego al <strong>detalle correspondiente</strong> (o se aplica el filtro).</p>
+</li>
+<li>
+<p>CA 4: Actualización y sello de frescura</p>
+</li>
+<li>Dado el panel visible</li>
+<li>
+<p>Entonces cada vista indica <strong>“Última actualización: {timestamp}”</strong> y los datos se <strong>actualizan en tiempo razonable</strong> (al menos <strong>diariamente</strong>).</p>
+</li>
+<li>
+<p>CA 5: Exportación</p>
+</li>
+<li>Dado un desglose (canciones, mercados, playlists)</li>
+<li>Cuando selecciono <strong>Exportar</strong></li>
+<li>Entonces descargo <strong>CSV o Excel</strong> con los resultados del filtro aplicado.</li>
+</ul>
+<hr />
+<h2 id="epica-social">Épica: Social<a class="headerlink" href="#epica-social" title="Permanent link">&para;</a></h2>
+<h3 id="seguimiento-de-perfiles-de-usuario">Seguimiento de Perfiles de Usuario<a class="headerlink" href="#seguimiento-de-perfiles-de-usuario" title="Permanent link">&para;</a></h3>
+<p><strong>Descripción</strong>: Como usuario, quiero seguir y dejar de seguir a otros usuarios para poder ver su actividad y recibir actualizaciones relacionadas con ellos.</p>
+<!-- Status: Opcional | Puntos: 2 | Pack: P3. Social + Notificaciones -->
+
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Seguir a un usuario</li>
+<li>Dado que estoy viendo el perfil de otro usuario</li>
+<li>Cuando selecciono la opción 'Seguir'</li>
+<li>
+<p>Entonces el perfil del usuario se añade a mi lista de seguidos y yo aparezco en su lista de seguidores.</p>
+</li>
+<li>
+<p>CA 2: Dejar de seguir a un usuario</p>
+</li>
+<li>Dado que estoy siguiendo a otro usuario</li>
+<li>Cuando selecciono la opción 'Dejar de seguir'</li>
+<li>
+<p>Entonces el perfil del usuario se elimina de mi lista de seguidos y yo desaparezco de su lista de seguidores.</p>
+</li>
+<li>
+<p>CA 3: Visualización de lista de seguidos</p>
+</li>
+<li>Dado que estoy en mi perfil</li>
+<li>Cuando accedo a la sección 'Seguidos'</li>
+<li>
+<p>Entonces veo una lista de todos los usuarios a los que estoy siguiendo.</p>
+</li>
+<li>
+<p>CA 4: Visualización de seguidores</p>
+</li>
+<li>Dado que estoy en mi perfil</li>
+<li>Cuando accedo a la sección 'Seguidores'</li>
+<li>Entonces veo una lista de todos los usuarios que me siguen.</li>
+</ul>
+<h3 id="visualizacion-de-actividad-de-amigos">Visualización de Actividad de Amigos<a class="headerlink" href="#visualizacion-de-actividad-de-amigos" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 3 | Pack: S7 — Social Base -->
+
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Feed de actividad de amigos</li>
+<li>Dado que sigo a otros usuarios</li>
+<li>Cuando accedo a la sección 'Inicio' o 'Feed'</li>
+<li>
+<p>Entonces veo un resumen de la actividad reciente de mis amigos (ej. canciones que les gustaron, playlists creadas).</p>
+</li>
+<li>
+<p>CA 2: Detalle de actividad de amigo</p>
+</li>
+<li>Dado que veo una actividad de un amigo en el feed</li>
+<li>Cuando selecciono la actividad</li>
+<li>
+<p>Entonces se me redirige al contenido asociado (ej. a la canción, a la playlist).</p>
+</li>
+<li>
+<p>CA 3: Filtrar actividad por tipo</p>
+</li>
+<li>Dado que veo el feed de actividad</li>
+<li>Cuando selecciono un filtro (ej. 'Canciones favoritas')</li>
+<li>Entonces la vista se actualiza para mostrar solo las actividades del tipo seleccionado.</li>
+</ul>
+<h3 id="compartir-canciones-y-playlists">Compartir Canciones y Playlists<a class="headerlink" href="#compartir-canciones-y-playlists" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 2 | Pack: S7 — Social Base -->
+
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Compartir canción en el feed de actividad</li>
+<li>Dado que estoy escuchando una canción</li>
+<li>Cuando selecciono la opción 'Compartir' y elijo un amigo.</li>
+<li>
+<p>Entonces la canción se compartirá en su feed de actividad y podrán acceder a ella.</p>
+</li>
+<li>
+<p>CA 2: Compartir playlist públicamente</p>
+</li>
+<li>Dado que he creado una playlist</li>
+<li>Cuando selecciono la opción 'Compartir' y elijo hacerla pública</li>
+<li>
+<p>Entonces la playlist estará disponible en mi perfil para que otros usuarios la vean y escuchen.</p>
+</li>
+<li>
+<p>CA 3: Compartir externamente</p>
+</li>
+<li>Dado que quiero compartir una canción o playlist</li>
+<li>Cuando selecciono la opción 'Compartir' y elijo una red social o app de mensajería</li>
+<li>Entonces se genera un enlace que puedo pegar o enviar a través de la plataforma externa seleccionada.</li>
+</ul>
+<h2 id="epica-vibras">Épica: Vibras<a class="headerlink" href="#epica-vibras" title="Permanent link">&para;</a></h2>
+<h3 id="playlists-tematicas-por-contexto-ia">Playlists temáticas por contexto [IA]<a class="headerlink" href="#playlists-tematicas-por-contexto-ia" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 3 | Pack: V9 — Vibras Core -->
+
+<p><strong>Descripción</strong>: Como oyente, quiero ver playlists temáticas (p. ej., Chill, Energía AM, Focus, Workout) ajustadas a la franja horaria o efemérides/temporadas (p. ej., Halloween, Navidad, verano) para poner música rápido sin buscar.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Selección por hora/fecha</li>
+<li>Dado que abro <strong>Explorar</strong></li>
+<li>Cuando hay una <strong>franja horaria</strong> activa o una <strong>efeméride/temporada</strong> vigente</li>
+<li>
+<p>Entonces veo <strong>2–4 playlists</strong> temáticas alineadas a ese contexto (por ej. si coinciden Navidad + mañana, prioriza navidad).</p>
+</li>
+<li>
+<p>CA 2: Ocultar playlist temática</p>
+</li>
+<li>Dado una playlist contextual mostrada</li>
+<li>Cuando se indica su <strong>motivo</strong> ("Mañana", "Halloween") y la <strong>oculto</strong></li>
+<li>Entonces esa playlist <strong>no vuelve a priorizarse por 30 días</strong>.</li>
+</ul>
+<h3 id="radio-por-cancion-ia">Radio por Canción [IA]<a class="headerlink" href="#radio-por-cancion-ia" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 3 | Pack: V9 — Vibras Core -->
+
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero <strong>iniciar una radio desde una canción</strong> para <strong>descubrir música similar de forma continua y sin esfuerzo</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Inicio</li>
+<li>Dado la ficha de una canción o el Player</li>
+<li>Cuando selecciono <strong>Iniciar radio desde esta canción</strong></li>
+<li>
+<p>Entonces se crea una nueva <strong>cola</strong> <em>“Radio de {Canción}”</em> con la canción semilla (si ya suena, continúa) y los <strong>siguientes</strong>.</p>
+</li>
+<li>
+<p>CA 2: Composición</p>
+</li>
+<li>Dado la radio activa</li>
+<li>Cuando se generan los siguientes</li>
+<li>
+<p>Entonces incluyen canciones del <strong>artista de la semilla</strong>, <strong>artistas similares</strong> y <strong>afines</strong>; <strong>no duplica</strong> canciones recientes de la sesión.</p>
+</li>
+<li>
+<p>CA 3: Feedback</p>
+</li>
+<li>Dado que escucho la radio</li>
+<li>Cuando marco <strong>Me Gusta</strong> canción/artista</li>
+<li>
+<p>Entonces las <strong>siguientes selecciones se ajustan</strong> en la sesión y se <strong>registran</strong> como señal para futuras Radios por Canción.</p>
+</li>
+<li>
+<p>CA 4: Controles y contexto</p>
+</li>
+<li>Dado la radio en curso</li>
+<li>Cuando abro Player/cola</li>
+<li>Entonces veo el <strong>indicador</strong> <em>“Radio de {Canción}”</em> ; si inicio manualmente otro contexto (álbum/playlist), la <strong>radio se detiene</strong></li>
+<li>Dado que el contexto se cambia nuevamente a la radio, se crea una <strong>nueva Radio por Canción</strong>.</li>
+</ul>
+<h3 id="auto-play-nuevo-contexto-ia">Auto Play (nuevo contexto) [IA]<a class="headerlink" href="#auto-play-nuevo-contexto-ia" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 3 | Pack: P1. Descubrimiento & Vibras Core -->
+
+<p><strong>Descripción</strong>: Como <strong>oyente</strong>, quiero que <strong>al terminar mi contexto actual</strong> (playlist/álbum/EP/single/radio) se <strong>inicie una nueva sesión “Auto Play”</strong> con <strong>15 canciones afines</strong>, <strong>independiente del contexto original</strong>, para <strong>seguir escuchando sin interrupciones</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Disparo y corte de contexto</li>
+<li>Dado que termina la última canción y <strong>no hay siguientes</strong></li>
+<li>Cuando Auto Play está <strong>activado</strong></li>
+<li>
+<p>Entonces se <strong>cierra</strong> el contexto original y se crea un <strong>nuevo contexto</strong>, que no es una Colección, con <strong>15 canciones</strong> añadidos a la cola.</p>
+</li>
+<li>
+<p>CA 2: Señalización clara</p>
+</li>
+<li>Dado que inicia Auto Play</li>
+<li>
+<p>Entonces el Player/cola muestran <strong>“Auto Play”</strong> como <strong>contexto activo</strong>; <strong>no</strong> se muestra el nombre del contexto anterior.</p>
+</li>
+<li>
+<p>CA 3: Composición de la cola</p>
+</li>
+<li>Dado el bloque de Auto Play</li>
+<li>
+<p>Entonces las 15 canciones son <strong>afines al gusto del oyente y a la última canción</strong> y <strong>respetan</strong> disponibilidad, bloqueos, etc.</p>
+</li>
+<li>
+<p>CA 4: Control del usuario</p>
+</li>
+<li>Dado Auto Play activo</li>
+<li>Cuando el usuario <strong>desactiva Auto Play</strong> y se termina la cola.</li>
+<li>
+<p>Entonces se <strong>detiene</strong> la autogeneración (sesión efímera).</p>
+</li>
+<li>
+<p>CA 5: Continuidad y fallback</p>
+</li>
+<li>Dado que se consumen las 15 y Auto Play sigue <strong>activado</strong></li>
+<li>Entonces se <strong>genera otro bloque</strong> de hasta 15; si no hay sugerencias, la reproducción <strong>se detiene</strong> sin error.</li>
+</ul>
+<hr />
+<h2 id="epica-onboarding-usuario">Épica: Onboarding Usuario<a class="headerlink" href="#epica-onboarding-usuario" title="Permanent link">&para;</a></h2>
+<h3 id="captura-inicial-de-generos-favoritos">Captura Inicial de Géneros Favoritos<a class="headerlink" href="#captura-inicial-de-generos-favoritos" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 2 | Pack: P9. Onboarding + Acceso Rápido -->
+
+<p><strong>Descripción</strong>: Como <strong>nuevo usuario</strong>, quiero <strong>seleccionar mis géneros musicales favoritos durante el onboarding</strong> para <strong>recibir recomendaciones iniciales que se ajusten a mis gustos</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Selección de Géneros</li>
+<li>Dado un nuevo usuario inicia sesión por primera vez</li>
+<li>Cuando se le presenta la pantalla de configuración inicial</li>
+<li>
+<p>Entonces puede seleccionar hasta 5 géneros musicales de una lista predefinida.</p>
+</li>
+<li>
+<p>CA 2: Guardado de Preferencias</p>
+</li>
+<li>Dado el usuario ha seleccionado sus géneros favoritos</li>
+<li>Cuando confirma la selección</li>
+<li>
+<p>Entonces sus preferencias de géneros se guardan en su perfil de usuario.</p>
+</li>
+<li>
+<p>CA 3: Uso para Recomendaciones Iniciales</p>
+</li>
+<li>Dado las preferencias de géneros han sido guardadas</li>
+<li>Cuando el usuario navega a la sección de descubrimiento</li>
+<li>
+<p>Entonces las recomendaciones iniciales se basan en los géneros seleccionados y se usan como semillas iniciales del Catálogo/Ranking.</p>
+</li>
+<li>
+<p>CA 4: Omitir Selección</p>
+</li>
+<li>Dado un nuevo usuario no desea seleccionar géneros en ese momento</li>
+<li>Cuando llega a la pantalla de configuración inicial</li>
+<li>Entonces puede omitir este paso y proceder a la aplicación sin preferencias iniciales registradas.</li>
+</ul>
+<h3 id="asistente-de-artistas-favoritos">Asistente de Artistas Favoritos<a class="headerlink" href="#asistente-de-artistas-favoritos" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 2 | Pack: P9. Onboarding + Acceso Rápido -->
+
+<p><strong>Descripción</strong>: Como <strong>nuevo usuario</strong>, quiero <strong>seleccionar algunos de mis artistas favoritos durante el onboarding</strong> para <strong>ayudar a la plataforma a entender mis preferencias musicales desde el principio</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Búsqueda y Selección de Artistas</li>
+<li>Dado el usuario se encuentra en el flujo de onboarding</li>
+<li>Cuando se le presenta la opción de buscar artistas</li>
+<li>
+<p>Entonces puede buscar artistas y añadir hasta 3 a su lista de favoritos.</p>
+</li>
+<li>
+<p>CA 2: Visualización de Artistas Añadidos</p>
+</li>
+<li>Dado el usuario ha seleccionado sus artistas favoritos</li>
+<li>Cuando revisa la pantalla de onboarding</li>
+<li>
+<p>Entonces ve una lista clara de los artistas que ha añadido.</p>
+</li>
+<li>
+<p>CA 3: Integración con Motor de Recomendación</p>
+</li>
+<li>Dado los artistas favoritos han sido registrados</li>
+<li>Cuando se generan las primeras recomendaciones</li>
+<li>
+<p>Entonces estas recomendaciones consideran la afinidad con los artistas seleccionados.</p>
+</li>
+<li>
+<p>CA 4: Opción de Saltarse Paso</p>
+</li>
+<li>Dado el usuario no recuerda artistas o no desea añadirlos</li>
+<li>Cuando se le presenta la pantalla de artistas favoritos</li>
+<li>Entonces puede continuar el onboarding sin añadir artistas.</li>
+</ul>
+<h3 id="personalizacion-de-notificaciones-iniciales">Personalización de Notificaciones Iniciales<a class="headerlink" href="#personalizacion-de-notificaciones-iniciales" title="Permanent link">&para;</a></h3>
+<!-- Status: Opcional | Puntos: 1 | Pack: P9. Onboarding + Acceso Rápido -->
+
+<p><strong>Descripción</strong>: Como <strong>nuevo usuario</strong>, quiero <strong>configurar mis preferencias de notificación durante el onboarding</strong> para <strong>controlar qué tipo de alertas recibiré de la plataforma</strong>.</p>
+<p><strong>Criterios de aceptación</strong></p>
+<ul>
+<li>CA 1: Opciones de Notificaciones</li>
+<li>Dado el usuario está en el flujo de onboarding</li>
+<li>Cuando se le presenta la pantalla de configuración de notificaciones</li>
+<li>
+<p>Entonces puede activar o desactivar notificaciones sobre nuevas recomendaciones, actualizaciones de artistas seguidos y playlists.</p>
+</li>
+<li>
+<p>CA 2: Guardado de Preferencias de Notificación</p>
+</li>
+<li>Dado el usuario ha seleccionado sus preferencias de notificación</li>
+<li>Cuando confirma la configuración</li>
+<li>
+<p>Entonces estas preferencias se guardan en su perfil y se configuran las notificaciones correspondientes.</p>
+</li>
+<li>
+<p>CA 3: Notificaciones por Defecto</p>
+</li>
+<li>Dado el usuario omite la configuración de notificaciones</li>
+<li>Cuando completa el onboarding</li>
+<li>
+<p>Entonces se le activan un conjunto predeterminado de notificaciones consideradas esenciales.</p>
+</li>
+<li>
+<p>CA 4: Acceso Posterior a Configuración</p>
+</li>
+<li>Dado el usuario ha completado el onboarding</li>
+<li>Cuando accede a la configuración de su cuenta</li>
+<li>Entonces puede modificar sus preferencias de notificación en cualquier momento.</li>
+</ul>
+<hr />
+<h2 id="entrega-y-requerimientos-del-tp">Entrega y Requerimientos del TP<a class="headerlink" href="#entrega-y-requerimientos-del-tp" title="Permanent link">&para;</a></h2>
+<p>Se pide <strong>implementar un proyecto que cumpla las historias de usuario mencionadas anteriormente</strong>. A continuación detallamos algunos atributos característicos que debe cumplir este proyecto.</p>
+<h3 id="componentes">Componentes<a class="headerlink" href="#componentes" title="Permanent link">&para;</a></h3>
+<p>La plataforma constará de los siguientes componentes:</p>
+<h3 id="aplicacion-mobile">Aplicación mobile<a class="headerlink" href="#aplicacion-mobile" title="Permanent link">&para;</a></h3>
+<p>Una aplicación mobile, el cual será utilizado por los usuarios.
+<em>Las tecnologías a utilizar son detalladas en la sección <a href="#tecnologias">tecnologías</a></em></p>
+<h3 id="backoffice-web">Backoffice web<a class="headerlink" href="#backoffice-web" title="Permanent link">&para;</a></h3>
+<p>Un backoffice web, el cual será utilizado por los administradores. </p>
+<p><em>Las tecnologías a utilizar son detalladas en la sección <a href="#tecnologias">tecnologías</a></em></p>
+<h3 id="servicios-backend">Servicios backend<a class="headerlink" href="#servicios-backend" title="Permanent link">&para;</a></h3>
+<p>Distintos servicios de backend para brindar soporte a la plataforma. Como enfoque se recomienda orientar estos servicios hacia una arquitectura de <a href="https://martinfowler.com/articles/microservices.html">microservices</a>. Dicha arquitectura propuesta deberá ser convalidada junto al ayudante. 
+<em>Las tecnologías a utilizar son detalladas en la sección <a href="#tecnologias">tecnologías</a></em></p>
+<p>Pedimos que tengan por lo menos <strong>dos</strong> microservicios, cada uno hecho en <strong>distintos lenguajes de programación</strong>. También les pedimos que utilicen al menos <strong>dos</strong> tecnologías distintas para la base de datos, una SQL y otra NoSQL.</p>
+<hr />
+<h3 id="tecnologias">Tecnologias<a class="headerlink" href="#tecnologias" title="Permanent link">&para;</a></h3>
+<p>Stack de tecnologías recomendadas para el desarrollo de los distintos componentes.</p>
+<h4 id="aplicacion-mobile_1">Aplicación mobile<a class="headerlink" href="#aplicacion-mobile_1" title="Permanent link">&para;</a></h4>
+<p>Para el desarrollo de la App recomienda usar <a href="https://reactnative.dev/">React Native</a>. Se puede optar por usar <strong>Expo</strong> encima de React Native, o no.</p>
+<hr />
+<h4 id="servicios-backend_1">Servicios backend<a class="headerlink" href="#servicios-backend_1" title="Permanent link">&para;</a></h4>
+<p>Para el desarrollo de los servicios backend se recomienda utilizar como lenguajes de programación:
+- <a href="https://www.python.org/">Python</a>
+- <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</a>
+- <a href="https://go.dev/">Go</a></p>
+<p>Junto con sus respectivos frameworks. La cátedra recomienda alguno de estos
+- Python:
+  - <a href="https://fastapi.tiangolo.com/">FastAPI</a>
+  - <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a>
+  - <a href="https://www.djangoproject.com/">Django</a>
+  - <a href="https://www.tornadoweb.org/en/stable/">Tornado</a></p>
+<ul>
+<li>JavaScript:</li>
+<li><a href="https://nodejs.org/es/">NodeJs</a></li>
+<li><a href="https://expressjs.com/">Express</a></li>
+<li><a href="https://www.fastify.io/">Fastify</a></li>
+<li>
+<p><a href="https://nestjs.com/">Nest.js</a></p>
+</li>
+<li>
+<p>GO:</p>
+</li>
+<li><a href="https://github.com/gin-gonic/gin">Gin</a></li>
+</ul>
+<p>Se recomiendan como base de datos alguna de las siguientes 
+- <a href="https://www.postgresql.org/">PostgreSQL</a>
+- <a href="https://www.mongodb.com/es">MongoDB</a></p>
+<p>Esta elección será responsabilidad del grupo y la misma deberá estar consensuada junto al ayudante. Además quedará justificada en la documentación técnica que formará parte del TP.</p>
+<hr />
+<h4 id="backoffice-web_1">Backoffice web<a class="headerlink" href="#backoffice-web_1" title="Permanent link">&para;</a></h4>
+<p>Para el desarrollo del backoffice web se podrán utilizar las siguientes herramientas
+  - <a href="https://reactjs.org/">React</a>
+  - <a href="https://vuejs.org/">Vue.js</a>
+  - <a href="https://nextjs.org/">Next.js</a></p>
+<hr />
+<h4 id="contenido-multimedia">Contenido multimedia<a class="headerlink" href="#contenido-multimedia" title="Permanent link">&para;</a></h4>
+<p>Para el uso de contenido multimedia se recomienda utilizar el servicio provisto por Supabase Storage. </p>
+<p>Alternativamente se puede optar por firebase <a href="https://firebase.google.com/docs/storage?hl=es">Storage</a></p>
+<hr />
+<h4 id="chat">Chat<a class="headerlink" href="#chat" title="Permanent link">&para;</a></h4>
+<p>Para el uso del chat en tiempo real se recomienda utilizar el servicio provisto por Supabase Realtime. </p>
+<p>Alternativamente se puede optar por firebase <a href="https://firebase.google.com/docs/database?hl=es">Real time database</a></p>
+<hr />
+<h4 id="notificaciones">Notificaciones<a class="headerlink" href="#notificaciones" title="Permanent link">&para;</a></h4>
+<h5 id="push">Push<a class="headerlink" href="#push" title="Permanent link">&para;</a></h5>
+<p>Para el uso de notificaciones push se recomienda utilizar el servicio provisto por firebase <a href="https://firebase.google.com/docs/cloud-messaging?hl=es">Cloud Messaging</a></p>
+<h5 id="mensajeria-whatsappsms">Mensajeria whatsapp/SMS<a class="headerlink" href="#mensajeria-whatsappsms" title="Permanent link">&para;</a></h5>
+<p>Para el uso de mensajería con SMS se recomienda utilizar el servicio provisto por <a href="https://www.twilio.com/docs/sms">Twilio</a></p>
+<hr />
+<h3 id="log">Log<a class="headerlink" href="#log" title="Permanent link">&para;</a></h3>
+<p>Los servidores deben contar con un sistema de log en donde se registren los eventos que se generen durante la ejecución. El sistema de log debe permitir configurar el nivel de los eventos que desean registrar. Estos niveles son:</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Condiciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Error</td>
+<td>Condición de falla catastrófica, el sistema no puede funcionar. (criterio de las 2 a.m.) Condición que haga que la aplicación no pueda ejecutar una funcionalidad. Ejemplo: No es posible conectarse con la base de datos</td>
+</tr>
+<tr>
+<td>Warn</td>
+<td>Cualquier condición anómala que afecte el funcionamiento del sistema, pero no impida la funcionalidad básica Ejemplos: Uso de APIs deprecadas, Mal uso de APIs</td>
+</tr>
+<tr>
+<td>Info</td>
+<td>Cualquier acción correspondiente a un caso de uso iniciada por el usuario o el sistema. Información que permita trazar el historial de las entidades. Ejemplos: Conexión a la base de datos exitosa, Conexión de nuevo cliente</td>
+</tr>
+<tr>
+<td>Debug</td>
+<td>Información de contexto que permita resolver un problema técnico. Debe ser útil incluso sin el código fuente Ejemplo:  Datos de login para la DB</td>
+</tr>
+</tbody>
+</table>
+<p>Estos logs deberán ser almacenados de tal manera que puedan ser accedidos en cualquier momento</p>
+<hr />
+<h3 id="monitoreo">Monitoreo<a class="headerlink" href="#monitoreo" title="Permanent link">&para;</a></h3>
+<p>Para el monitoreo de los servicios se recomiendan alguna de las siguientes librerías/plataformas</p>
+<ul>
+<li><a href="https://www.datadoghq.com/blog/datadog-github-student-developer-pack/">Datadog</a></li>
+<li><a href="https://blog.newrelic.com/product-news/simple-pricing/">New Relic</a></li>
+<li><a href="https://prometheus.io/">Prometheus</a></li>
+<li><a href="https://grafana.com/">Grafana</a></li>
+</ul>
+<hr />
+<h3 id="empaquetamiento">Empaquetamiento<a class="headerlink" href="#empaquetamiento" title="Permanent link">&para;</a></h3>
+<p>Cada uno de los desarrollos solicitados debe empaquetarse a través de Docker, soportando las mejores prácticas para armar imágenes ligeras y fácilmente desplegables en la plataforma elegida.</p>
+<hr />
+<h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
+<p>El desarrollo de la aplicación se deberá adaptar a los estándares de calidad utilizados por AppMaker©. Dentro de estos estándares se encuentran:</p>
+<ul>
+<li>Pruebas unitarias</li>
+<li>Métricas: code coverage debe ser mayor a 75%</li>
+<li>Respetar estándar para estilo de codificación: Lint</li>
+<li>Pruebas de integración.</li>
+<li>Todas aquellas que se consideren convenientes para garantizar la calidad de las aplicaciones desarrolladas.</li>
+</ul>
+<p><strong>Nota:</strong> Esta sección hace sólo referencia a los servicios de backend No se toma como requerimiento el realizar pruebas sobre el cliente Android, aunque es recomendado como una buena práctica.</p>
+<hr />
+<h3 id="ci-cd">CI-CD<a class="headerlink" href="#ci-cd" title="Permanent link">&para;</a></h3>
+<p>Las pruebas y métricas anteriormente mencionadas deberán correr bajo una plataforma de integración continua. </p>
+<p>Se sugiere el uso de <a href="https://github.com/features/actions">GitHub Actions</a> o <a href="https://docs.gitlab.com/ee/ci/pipelines/">Gitlab Pipelines</a>, pero se podrá utilizar otro previa justificación.</p>
+<p>El resultado del <em>code coverage</em> debe ser desplegado automáticamente a una plataforma que permita visualizarlas, entre muchas posibilidades se encuentran:</p>
+<ul>
+<li><a href="https://coveralls.io/">Coveralls</a></li>
+<li><a href="https://codecov.io/">Codecov</a></li>
+<li>Utilizar <a href="https://pages.github.com/">Github Pages</a> para generar una web para visualizarlo</li>
+</ul>
+<p>Finalmente, el despliegue al servidor de <em>PAAS</em> elegido deberá ser automático. Este deberá tener en cuenta como la actualización de la base de datos (cambios en las tablas, etc). El mecanismo utilizado para disparar dicho despliegue (utilizar el branch <em>master</em> como productivo, utilizar un tags con nombre especial) será definido por los desarrolladores y deberá ser detallado en la documentación</p>
+<hr />
+<h3 id="despliegue-en-la-nube">Despliegue en la Nube<a class="headerlink" href="#despliegue-en-la-nube" title="Permanent link">&para;</a></h3>
+<p>Los servicios, se deberán disponibilizar en la nube utilizando una plataforma como servicio (<em><a href="https://en.wikipedia.org/wiki/Platform_as_a_service">PAAS</a></em>).
+La catedra recomienda leer la (sección)[https://ingenieria-del-software-2.github.io/blog/2025-09-11-cloud-computing] del sitio de la materia para informarse las distintas opciones disponibles</p>
+<hr />
+<h3 id="despliegue-usando-k8s">Despliegue usando k8s<a class="headerlink" href="#despliegue-usando-k8s" title="Permanent link">&para;</a></h3>
+<p>De manera optativa se podrá realizar una migración de los servicios backend de la plataforma a kubernetes</p>
+<hr />
+<h3 id="ux">UX<a class="headerlink" href="#ux" title="Permanent link">&para;</a></h3>
+<p>Se deberá presentar evidencia de prototipado del diseño de pantallas, las cuales serán convalidadas junto al ayudante a cargo</p>
+<p>Para el diseño de la interfaz se valorara el uso de las guías de diseño propuestas por Google con <em><a href="https://material.io/design/">Material Design</a></em>.</p>
+<hr />
+<h3 id="documentacion">Documentación<a class="headerlink" href="#documentacion" title="Permanent link">&para;</a></h3>
+<p>Se deberá entregar un informe final a modo Bitácora de proyecto, disponible en <a href="https://pages.github.com/">Github Pages</a>. Allí se deberá escribir
+- Diagrama(s) de arquitectura
+- Decisiones de arquitectura tomadas a lo largo del proyecto (por qué tienen los microservicios que tienen, por qué usaron las tecnologías que usaron)
+- Funcionalidades incompletas o que les hubiera gustado pulir más, errores conocidos en la entrega final
+- Problemas encontrados y lecciones aprendidas a lo largo del proyecto
+- Opcionalmente, demostraciones de features o implementaciones que quieran hacer énfasis y mostrar porque creen que les haya quedado bien.</p>
+<p><em>Se espera que dicha documentación se elabore de manera incremental y que cada entrega parcial tenga parte de la misma.</em></p>
+<hr />
+<h2 id="instancias-de-entrega">Instancias de entrega<a class="headerlink" href="#instancias-de-entrega" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Instancia</th>
+<th style="text-align: center;">Fecha</th>
+<th style="text-align: right;">Alcance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Checkpoint 1</td>
+<td style="text-align: center;">22/09</td>
+<td style="text-align: right;">A definir</td>
+</tr>
+<tr>
+<td>Checkpoint 2</td>
+<td style="text-align: center;">20/10</td>
+<td style="text-align: right;">A definir</td>
+</tr>
+<tr>
+<td>Checkpoint 3</td>
+<td style="text-align: center;">13/11</td>
+<td style="text-align: right;">A definir</td>
+</tr>
+<tr>
+<td>Entrega Final</td>
+<td style="text-align: center;">4/12</td>
+<td style="text-align: right;">A definir</td>
+</tr>
+</tbody>
+</table>
+<h2 id="___">___<a class="headerlink" href="#___" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Melodia-FIUBA" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
