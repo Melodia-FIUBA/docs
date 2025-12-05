@@ -6,8 +6,6 @@ Esta sección describe la arquitectura general de Melodia, incluyendo la infraes
 
 ## Visión General del Sistema
 
-<!-- TODO: Agregar diagrama de arquitectura de alto nivel -->
-
 La arquitectura de Melodia sigue un patrón de **microservicios**, donde cada servicio tiene una responsabilidad única y bien definida. Los servicios se comunican entre sí principalmente a través de APIs REST.
 
 ```mermaid
@@ -19,7 +17,7 @@ graph TB
 
     subgraph "Backend Services"
         Users[👤 Users Service]
-        Songs[🎵 Songs Service]
+        Songs[🎵 Content Service]
         AdminSvc[⚙️ Admin Service]
     end
 
@@ -59,11 +57,11 @@ graph TB
 
 Todos los microservicios de Melodia se despliegan en **Cloud Run**, aprovechando su capacidad de escalado automático y modelo serverless.
 
-| Servicio      | Imagen                         | Recursos          | Escalado        |
-| ------------- | ------------------------------ | ----------------- | --------------- |
-| Songs Service | `gcr.io/melodia/songs-service` | 1 vCPU, 512MB RAM | 0-10 instancias |
-| Users Service | `gcr.io/melodia/users-service` | 1 vCPU, 256MB RAM | 0-10 instancias |
-| Admin Service | `gcr.io/melodia/admin-service` | 1 vCPU, 256MB RAM | 0-5 instancias  |
+| Servicio        | Imagen                         | Recursos          | Escalado        |
+| --------------- | ------------------------------ | ----------------- | --------------- |
+| Content Service | `gcr.io/melodia/songs-service` | 1 vCPU, 512MB RAM | 0-10 instancias |
+| Users Service   | `gcr.io/melodia/users-service` | 1 vCPU, 256MB RAM | 0-10 instancias |
+| Admin Service   | `gcr.io/melodia/admin-service` | 1 vCPU, 256MB RAM | 0-5 instancias  |
 
 <!-- TODO: Completar con configuraciones reales de Cloud Run -->
 
@@ -71,11 +69,11 @@ Todos los microservicios de Melodia se despliegan en **Cloud Run**, aprovechando
 
 Cada microservicio tiene su propia base de datos PostgreSQL en Cloud SQL.
 
-| Base de Datos      | Servicio      | Tier        | Almacenamiento |
-| ------------------ | ------------- | ----------- | -------------- |
-| `melodia-songs-db` | Songs Service | db-f1-micro | 10 GB SSD      |
-| `melodia-users-db` | Users Service | db-f1-micro | 10 GB SSD      |
-| `melodia-admin-db` | Admin Service | db-f1-micro | 10 GB SSD      |
+| Base de Datos      | Servicio        | Tier        | Almacenamiento |
+| ------------------ | --------------- | ----------- | -------------- |
+| `melodia-songs-db` | Content Service | db-f1-micro | 10 GB SSD      |
+| `melodia-users-db` | Users Service   | db-f1-micro | 10 GB SSD      |
+| `melodia-admin-db` | Admin Service   | db-f1-micro | 10 GB SSD      |
 
 <!-- TODO: Actualizar con configuraciones reales -->
 
@@ -100,7 +98,7 @@ graph TB
         LB[Cloud Load Balancer]
 
         subgraph "Cloud Run"
-            Songs[Songs Service]
+            Songs[Content Service]
             Users[Users Service]
             AdminSvc[Admin Service]
         end
@@ -135,7 +133,7 @@ graph TB
 ```mermaid
 sequenceDiagram
     participant App as 📱 Mobile App
-    participant Songs as 🎵 Songs Service
+    participant Songs as 🎵 Content Service
     participant Users as 👤 Users Service
 
     Note over App,Users: Flujo de Login
@@ -155,7 +153,7 @@ sequenceDiagram
 ```mermaid
 sequenceDiagram
     participant App as 📱 Mobile App
-    participant Songs as 🎵 Songs Service
+    participant Songs as 🎵 Content Service
     participant GCS as ☁️ Cloud Storage
 
     App->>Songs: POST /songs/upload-url
@@ -171,7 +169,7 @@ sequenceDiagram
 ```mermaid
 sequenceDiagram
     participant App as 📱 Mobile App
-    participant Songs as 🎵 Songs Service
+    participant Songs as 🎵 Content Service
     participant GCS as ☁️ Cloud Storage
 
     App->>Songs: GET /songs/{id}/stream

@@ -51,7 +51,7 @@ Items identificados que requieren refactorización o mejora:
 
 ### Backend
 
-- [ ] **Songs Service**: Refactorizar manejo de errores
+- [ ] **Content Service**: Refactorizar manejo de errores
 - [ ] **Users Service**: Implementar rate limiting
 - [ ] **Admin Service**: Agregar paginación a endpoints de listado
 - [ ] **General**: Estandarizar formato de logs entre servicios

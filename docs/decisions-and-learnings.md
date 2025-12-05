@@ -34,7 +34,7 @@ Esta sección documenta las decisiones de arquitectura de alto nivel tomadas dur
 | ---------------- | ------------------ | ------------------------- | ----------------- |
 | Mobile App       | React Native       | Flutter, Native           | _Pendiente_       |
 | Admin Backoffice | Next.js            | Create React App, Vue.js  | _Pendiente_       |
-| Songs Service    | Python/Flask       | FastAPI, Django           | _Pendiente_       |
+| Content Service  | Python/Flask       | FastAPI, Django           | _Pendiente_       |
 | Users Service    | Go                 | Node.js, Python           | _Pendiente_       |
 | Admin Service    | Go                 | Node.js, Python           | _Pendiente_       |
 
@@ -79,15 +79,15 @@ Esta sección documenta las decisiones de arquitectura de alto nivel tomadas dur
 
 **Flujo de subida**:
 
-1. Cliente solicita URL de subida al Songs Service
-2. Songs Service genera URL firmada con permisos de escritura
+1. Cliente solicita URL de subida al Content Service
+2. Content Service genera URL firmada con permisos de escritura
 3. Cliente sube archivo directamente a GCS
-4. Songs Service registra metadata en la base de datos
+4. Content Service registra metadata en la base de datos
 
 **Flujo de streaming**:
 
 1. Cliente solicita canción
-2. Songs Service genera URL firmada con tiempo de expiración
+2. Content Service genera URL firmada con tiempo de expiración
 3. Cliente reproduce desde URL firmada
 
 ---

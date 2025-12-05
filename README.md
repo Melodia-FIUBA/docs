@@ -17,7 +17,7 @@ La documentación incluye:
 - **Servicios**: Documentación detallada de cada componente
   - Mobile App (React Native)
   - Admin Backoffice (Next.js)
-  - Songs Service (Python/Flask)
+  - Content Service (Python/Flask)
   - Users Service (Go)
   - Admin Service (Go)
 

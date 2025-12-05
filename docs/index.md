@@ -8,21 +8,19 @@ La plataforma permite a los usuarios escuchar música, crear playlists, seguir a
 
 📄 **[Enunciado del Trabajo Práctico](enunciado.md)**
 
-🎬 **[Video Demo](https://example.com)** <!-- TODO: Reemplazar con link real del video demo -->
+🎬 **[Video Demo (Pending)]()** <!-- TODO: Reemplazar con link real del video demo -->
 
 ---
 
 ## 👥 Equipo
 
-| Nombre      | Rol | GitHub |
-| ----------- | --- | ------ |
-| _Pendiente_ | -   | -      |
-| _Pendiente_ | -   | -      |
-| _Pendiente_ | -   | -      |
-| _Pendiente_ | -   | -      |
-| _Pendiente_ | -   | -      |
-
-<!-- TODO: Completar con información del equipo -->
+| Nombre                    | Rol                       | GitHub                        |
+| ------------------------- | ------------------------- | ----------------------------- |
+| Agustín García Dresch     | Frontend Mobile Developer | -                             |
+| Franco Daniel Capra       | Backend Developer         | -                             |
+| Grabriel Fernan Carniglia | Frontend Web Developer    | -                             |
+| Santiago Janon            | Frontend Mobile Developer | -                             |
+| Theo Miguel               | Backend Developer         | https://github.com/TheoMiguel |
 
 ---
 
@@ -34,7 +32,7 @@ Visión general de la arquitectura del sistema, infraestructura en GCP y comunic
 
 ### Roadmap y Checkpoints
 
-Progreso del proyecto organizado por checkpoints de desarrollo:
+Progreso del proyecto organizado por checkpoints de desarrollo. Cada sprint entre los checkpoints fué de 3 semanas.
 
 - [Checkpoint 1](checkpoints/checkpoint-1.md)
 - [Checkpoint 2](checkpoints/checkpoint-2.md)
@@ -45,7 +43,7 @@ Progreso del proyecto organizado por checkpoints de desarrollo:
 
 - 📱 [Mobile App](services/mobile-app.md) - Aplicación móvil React Native para usuarios (oyentes y artistas)
 - 🖥️ [Admin Backoffice](services/admin-backoffice.md) - Panel web Next.js de administración
-- 🎵 [Songs Service](services/songs-service.md) - Microservicio Python/Flask para gestión de canciones y playlists
+- 🎵 [Content Service](services/songs-service.md) - Microservicio Python/Flask para gestión de canciones y playlists
 - 👤 [Users Service](services/users-service.md) - Microservicio Go para autenticación y gestión de usuarios
 - ⚙️ [Admin Service](services/admin-service.md) - Microservicio Go para operaciones administrativas
 

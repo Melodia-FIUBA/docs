@@ -52,7 +52,7 @@ nav:
   - Servicios:
       - Mobile App: services/mobile-app.md
       - Admin Backoffice: services/admin-backoffice.md
-      - Songs Service: services/songs-service.md
+      - Content Service: services/songs-service.md
       - Users Service: services/users-service.md
       - Admin Service: services/admin-service.md
   - Decisiones de Arquitectura: decisions-and-learnings.md

@@ -12,7 +12,7 @@ El Users Service es el microservicio encargado de la autenticación, autorizaci�
 graph LR
     Users[👤 Users Service]
 
-    Songs[🎵 Songs Service] --> Users
+    Songs[🎵 Content Service] --> Users
     Admin[⚙️ Admin Service] --> Users
     App[📱 Mobile App] --> Users
     Backoffice[🖥️ Admin Backoffice] --> Users

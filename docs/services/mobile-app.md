@@ -13,7 +13,7 @@ graph LR
     App[📱 Mobile App]
 
     App --> Users[👤 Users Service]
-    App --> Songs[🎵 Songs Service]
+    App --> Songs[🎵 Content Service]
 
     Users --> |Autenticación| App
     Songs --> |Canciones & Playlists| App

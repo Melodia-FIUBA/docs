@@ -1,8 +1,8 @@
-# 🎵 Songs Service
+# 🎵 Content Service
 
 **Repositorio**: [Melodia-FIUBA/songs-service](https://github.com/Melodia-FIUBA/songs-service)
 
-El Songs Service es el microservicio encargado de gestionar toda la lógica relacionada con canciones, álbumes, playlists y colecciones en Melodia.
+El Content Service es el microservicio encargado de gestionar toda la lógica relacionada con canciones, álbumes, playlists y colecciones en Melodia.
 
 ---
 
@@ -10,7 +10,7 @@ El Songs Service es el microservicio encargado de gestionar toda la lógica rela
 
 ```mermaid
 graph LR
-    Songs[🎵 Songs Service]
+    Songs[🎵 Content Service]
 
     Songs --> Users[👤 Users Service]
     Songs --> GCS[☁️ Cloud Storage]

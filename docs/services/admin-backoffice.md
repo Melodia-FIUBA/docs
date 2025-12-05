@@ -13,7 +13,7 @@ graph LR
     Admin[🖥️ Admin Backoffice]
 
     Admin --> Users[👤 Users Service]
-    Admin --> Songs[🎵 Songs Service]
+    Admin --> Songs[🎵 Content Service]
     Admin --> AdminSvc[⚙️ Admin Service]
 
     Users --> |Autenticación Admin| Admin
